@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 const Date = styled.div`
   font-size: 14px;
+  text-align: right;
+  min-width: 120px;
 `
 
 const Title = styled.h3.attrs({
