@@ -21,11 +21,13 @@ injectGlobal`
   p a {
     font-weight: bold;
     color: #37474f;
-    text-decoration: none;
+    text-decoration: underline;
+    transition: 0.4s opacity;
   }
 
+  p a:hover,
   p a:hover {
-    text-decoration: underline;
+    opacity: 0.9;
   }
 
 `
