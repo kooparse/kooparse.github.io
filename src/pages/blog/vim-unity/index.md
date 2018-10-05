@@ -5,7 +5,7 @@ description: How to setup Vim with Unity
 date: "2018-10-02T00:00:00.000Z"
 ---
 
-I really enjoy **Vim**. This old and fast terminal editor matches entirely my free spirit. So when I started to use Unity I was rapidly looking a way to integrate Vim in my workflow. Very few IDEs and text editors are officially supported by Unity -- only Visual Studio.
+I really enjoy **Vim**. This old and fast terminal editor matches entirely my free spirit. So when I started to use Unity I was rapidly looking for a way to integrate Vim in my workflow. Very few IDEs and text editors are officially supported by Unity -- only Visual Studio.
 
 I want two things -- **autocompletion** with *omnifunc* and a consistent **syntax highlighter** for C#.
 
