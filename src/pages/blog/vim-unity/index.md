@@ -5,7 +5,7 @@ description: How to setup Vim with Unity
 date: "2018-10-02T00:00:00.000Z"
 ---
 
-I really enjoy **Vim**. This old and fast terminal editor matches entirely my free spirit. So when I started to use Unity I was rapidly looking for a way to integrate Vim in my workflow. Very few IDEs and text editors are officially supported by Unity -- only Visual Studio.
+I really enjoy **Vim**. This old and fast terminal editor reflects the way my mind works. So when I started to use Unity I was rapidly looking for a way to integrate Vim in my workflow. Very few IDEs and text editors are officially supported by Unity -- only Visual Studio.
 
 I want two things -- **autocompletion** with *omnifunc* and a consistent **syntax highlighter** for C#.
 
@@ -52,8 +52,8 @@ Useful commands:
 
 Things that could be better:
 
-I would love to have C# with LSP (Language Server Protocol). It seems that it is in work in progress [here](https://github.com/OmniSharp/csharp-language-server-protocol).
-Smarter and better highlights would be great too. I will write an issue on that.
+- I would love to have C# with LSP (Language Server Protocol). It seems that it is in work in progress [here](https://github.com/OmniSharp/csharp-language-server-protocol).<br/>
+- Smarter and better highlights would be great too. I will write an issue for that.
 
 If you have more informations or updates, don't hesitate!
 
