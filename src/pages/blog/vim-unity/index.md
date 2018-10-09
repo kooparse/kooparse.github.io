@@ -18,8 +18,7 @@ I first got some problems but everything is solved thanks to folks' help from th
 
 - We must have *libv* installed on our machine. `brew install libv` for macOS.
 
-The plugin to install is **omnisharp-vim**. It relies on omnisharp-roslyn.<br/>
-*Omnisharp* is a set of tools for integrations -- various IDE like VSCode use this -- and *Roslyn* is a C# compiler, open sourced by Microsoft.
+The plugin to install is **omnisharp-vim**. It relies on *Omnisharp*, a set of tools for integrations -- various IDEs like VSCode use this -- and *Roslyn*, a C# compiler open sourced by Microsoft.
 
 ```
 Plug 'OmniSharp/omnisharp-vim'
@@ -43,7 +42,8 @@ let g:ale_linters = {
 \}
 ```
 
-Now, we are good to go. The *Omnisharp* server will start automatically when we open some .cs files.
+Now, we are good to go. The *Omnisharp* server will start automatically when we open some .cs files.<br/>
+
 Useful commands:
 
 - **:OmnisharpStartServer** to restart the server.
