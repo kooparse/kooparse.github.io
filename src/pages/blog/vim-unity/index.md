@@ -53,7 +53,7 @@ Useful commands:
 Things that could be better:
 
 - I would love to have C# with LSP (Language Server Protocol). It seems that it is in work in progress [here](https://github.com/OmniSharp/csharp-language-server-protocol).<br/>
-- Smarter and better highlights would be great too. I will write an issue for that.
+- Smarter and better highlights would be great too. I [wrote](https://github.com/OmniSharp/omnisharp-vim/issues/428) an issue for that. Much better from this [branch](https://github.com/OmniSharp/omnisharp-vim/tree/type_highlighting).
 
 If you have more informations or updates, don't hesitate!
 
