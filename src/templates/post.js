@@ -57,20 +57,23 @@ export default ({ data, pathContext, ...props }) => {
   return (
     <Layout location={props.location}>
       <MainContainer>
-        <Helmet>
-          <title>{post.frontmatter.title}</title>
-          <meta
-            name="article:published_time"
-            content={post.frontmatter.rawDate}
-          />
-          <meta name="og:title" content={post.frontmatter.title} />
-          <meta name="og:description" content={post.frontmatter.description} />
-          <meta name="twitter:title" content={post.frontmatter.title} />
-          <meta
-            name="twitter:description"
-            content={post.frontmatter.description}
-          />
-        </Helmet>
+        <Helmet
+          title={post.frontmatter.title}
+          meta={[
+            { name: 'description', content: post.frontmatter.description },
+            {
+              name: 'article:published_time',
+              content: post.frontmatter.rawDate,
+            },
+            { name: 'og:title', content: post.frontmatter.title },
+            { name: 'og:description', content: post.frontmatter.description },
+            { name: 'twitter:title', content: post.frontmatter.title },
+            {
+              name: 'twitter:description',
+              content: post.frontmatter.description,
+            },
+          ]}
+        />
         <Spacer>
           <Header title={post.frontmatter.title} size={38} />
           <Date>{post.frontmatter.date}</Date>

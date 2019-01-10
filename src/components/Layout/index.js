@@ -42,7 +42,6 @@ export default ({ children, location, ...props }) => {
   }
   return (
     <div style={{ margin: 0 }}>
-      <Helmet meta={[]} />
       <Helmet
         defaultTitle={defaultTitle}
         titleTemplate={`%s | ${defaultTitle}`}
