@@ -3,6 +3,7 @@ module.exports = {
     title: 'Thinking Box',
     author: 'Alexandre Chêne',
     description: "Alexandre's thinking box",
+    favicon: "/favicon.png?v=1",
     siteUrl: 'https://kooparse.com',
   },
   plugins: [

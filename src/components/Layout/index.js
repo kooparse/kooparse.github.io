@@ -1,13 +1,12 @@
 import 'normalize.css'
 import 'prismjs/themes/prism-solarizedlight.css'
+import get from 'lodash/get'
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Link } from 'gatsby'
+import { StaticQuery, Link } from 'gatsby'
 import { injectGlobal } from 'styled-components'
 import Navbar from '../../components/Navbar'
 import thumbnail from './calvin_hobbes.jpg'
-
-const defaultTitle = "Alex's Thinking Box"
 
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
@@ -33,7 +32,11 @@ injectGlobal`
   }
 `
 
-export default ({ children, location, ...props }) => {
+const Layout = ({ data, children, location }) => {
+  const title = get(data, 'site.siteMetadata.title')
+  const description = get(data, 'site.siteMetadata.description')
+  const favicon = get(data, 'site.siteMetadata.favicon')
+
   let rootPath = `/`
   const isOnBlogPage = location.pathname.includes('blog')
 
@@ -43,27 +46,31 @@ export default ({ children, location, ...props }) => {
   return (
     <div style={{ margin: 0 }}>
       <Helmet
-        defaultTitle={defaultTitle}
-        titleTemplate={`%s | ${defaultTitle}`}
+        htmlAttributes={{ lang: 'en' }}
+        defaultTitle={title}
+        titleTemplate={`%s | ${title}`}
         meta={[
+          { name: 'description', content: description },
           { name: 'image', content: thumbnail },
-
           { name: 'twitter:site', content: '@kooparse' },
           { name: 'twitter:creator', content: '@kooparse' },
-          { name: 'twitter:title', content: defaultTitle },
+          { name: 'twitter:title', content: title },
+          { name: 'twitter:description', content: description },
           { name: 'twitter:image', content: thumbnail },
           { name: 'twitter:card', content: 'summary_large_image' },
 
-          { name: 'og:title', content: defaultTitle },
+          { name: 'og:title', content: title },
+          { name: 'og:description', content: description },
           { name: 'og:type', content: 'website' },
           { name: 'og:image', content: thumbnail },
-          { name: 'og:site_name', content: defaultTitle },
+          { name: 'og:site_name', content: title },
         ]}
         link={[
           {
             rel: 'canonical',
             href: `https://kooparse.com${location.pathname}`,
           },
+          { rel: 'icon', href: favicon },
         ]}
       />
       <Navbar isOnBlogPage={isOnBlogPage} />
@@ -71,3 +78,20 @@ export default ({ children, location, ...props }) => {
     </div>
   )
 }
+
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            favicon
+          }
+        }
+      }
+    `}
+    render={data => <Layout data={data} {...props} />}
+  />
+)
