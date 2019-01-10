@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import Layout from '../../components/Layout'
 import { WideContainer } from '../../components/Container'
-import profile from './profile.jpg'
 
 const Image = styled.img`
   width: 100%;
@@ -33,33 +32,16 @@ const Description = styled.p`
   max-width: 450px;
 `
 
-const TwitterLink = styled.a`
+const Link = styled.a`
   text-decoration: none;
   color: #37474f;
   font-weight: bold;
-`
-
-const ProfileBackground = styled.div`
-  flex: 1;
-  min-width: 500px;
-  height: 700px;
-  background-image: url(${profile});
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05),
-    inset 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #d3d3d340;
-
-  @media (max-width: 1100px) {
-    display: none;
-  }
 `
 
 export default props => (
   <Layout location={props.location}>
     <WideContainer>
       <Content>
-        <ProfileBackground />
         <Description>
           Hello, my name is Alexandre Chêne!
           <br />I am an independant software engineer.
@@ -71,10 +53,14 @@ export default props => (
           <br />I am 200% on game dev right now. Working mostly by myself.
           <br />
           <br />
-          You can also find me on{' '}
-          <TwitterLink href="https://twitter.com/kooparse" target="_blank">
+          You can also find me on&nbsp;
+          <Link href="https://twitter.com/kooparse" target="_blank">
             twitter
-          </TwitterLink>
+          </Link>
+          &nbsp;or&nbsp;
+          <Link href="https://github.com/kooparse" target="_blank">
+            github
+          </Link>
           .
         </Description>
       </Content>

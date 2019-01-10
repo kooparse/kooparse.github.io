@@ -8,16 +8,16 @@ import Layout from '../components/Layout'
 import Post from '../components/Post'
 
 export default props => {
-  const siteTitle = get(props, 'data.site.siteMetadata.title')
-  const siteDescription = get(props, 'data.site.siteMetadata.description')
+  const title = get(props, 'data.site.siteMetadata.title')
+  const description = get(props, 'data.site.siteMetadata.description')
   const posts = get(props, 'data.allMarkdownRemark.edges')
 
   return (
     <Layout location={props.location}>
       <Helmet
         htmlAttributes={{ lang: 'en' }}
-        meta={[{ name: 'description', content: siteDescription }]}
-        title={siteTitle}
+        meta={[{ name: 'description', content: description }]}
+        title={title}
       />
       <MainContainer>
         {posts.map(({ node }) => (

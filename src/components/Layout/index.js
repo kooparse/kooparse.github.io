@@ -5,7 +5,9 @@ import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 import { injectGlobal } from 'styled-components'
 import Navbar from '../../components/Navbar'
-import profile from './profile.jpg'
+import thumbnail from './calvin_hobbes.jpg'
+
+const defaultTitle = "Alex's Thinking Box"
 
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
@@ -29,12 +31,9 @@ injectGlobal`
   p a:hover {
     opacity: 0.9;
   }
-
 `
 
-const defaultTitle = "Alex's Thinking Box"
-
-export default ({ children, location }) => {
+export default ({ children, location, ...props }) => {
   let rootPath = `/`
   const isOnBlogPage = location.pathname.includes('blog')
 
@@ -43,19 +42,27 @@ export default ({ children, location }) => {
   }
   return (
     <div style={{ margin: 0 }}>
+      <Helmet meta={[]} />
       <Helmet
         defaultTitle={defaultTitle}
         titleTemplate={`%s | ${defaultTitle}`}
-      >
-        <meta name="twitter:site" content="@kooparse" />
-        <meta name="og:type" content="website" />
-        <meta name="og:image" content={profile} />
-        <meta name="og:site_name" content={defaultTitle} />
-        <link
-          rel="canonical"
-          href={`https://kooparse.com${location.pathname}`}
-        />
-      </Helmet>
+        meta={[
+          { name: 'image', content: thumbnail },
+
+          { name: 'twitter:site', content: '@kooparse' },
+          { name: 'twitter:image', content: thumbnail },
+
+          { name: 'og:type', content: 'website' },
+          { name: 'og:image', content: thumbnail },
+          { name: 'og:site_name', content: defaultTitle },
+        ]}
+        link={[
+          {
+            rel: 'canonical',
+            href: `https://kooparse.com${location.pathname}`,
+          },
+        ]}
+      />
       <Navbar isOnBlogPage={isOnBlogPage} />
       {children}
     </div>
