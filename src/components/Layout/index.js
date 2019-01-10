@@ -50,8 +50,12 @@ export default ({ children, location, ...props }) => {
           { name: 'image', content: thumbnail },
 
           { name: 'twitter:site', content: '@kooparse' },
+          { name: 'twitter:creator', content: '@kooparse' },
+          { name: 'twitter:title', content: defaultTitle },
           { name: 'twitter:image', content: thumbnail },
+          { name: 'twitter:card', content: 'summary_large_image' },
 
+          { name: 'og:title', content: defaultTitle },
           { name: 'og:type', content: 'website' },
           { name: 'og:image', content: thumbnail },
           { name: 'og:site_name', content: defaultTitle },

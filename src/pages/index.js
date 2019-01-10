@@ -16,7 +16,11 @@ export default props => {
     <Layout location={props.location}>
       <Helmet
         htmlAttributes={{ lang: 'en' }}
-        meta={[{ name: 'description', content: description }]}
+        meta={[
+          { name: 'description', content: description },
+          { name: 'twitter:description', content: description },
+          { name: 'og:description', content: description },
+        ]}
         title={title}
       />
       <MainContainer>
