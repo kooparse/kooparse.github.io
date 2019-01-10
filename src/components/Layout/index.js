@@ -12,7 +12,7 @@ injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
 
   html, body, p {
-    font-family: -apple-system, PT Sans, Helvetica, SF Pro Text, sans-serif;
+    font-family: PT Sans, Helvetica, SF Pro Text, sans-serif;
 		color: #37474f;
   }
 	.gatsby-highlight pre[class*="language-"] {

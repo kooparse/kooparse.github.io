@@ -3,7 +3,7 @@ module.exports = {
     title: 'Thinking Box',
     author: 'Alexandre Chêne',
     description: "Alexandre's thinking box",
-    favicon: "/favicon.png?v=1",
+    favicon: '/favicon.png?v=1',
     siteUrl: 'https://kooparse.com',
   },
   plugins: [
@@ -42,7 +42,11 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Thinking Box',
-        start_url: `/`,
+        short_name: 'Alex\'s blog',
+        start_url: '/',
+        background_color: '#fff',
+        theme_color: '#fbb250',
+        display: 'standalone'
       },
     },
     `gatsby-plugin-feed`,
