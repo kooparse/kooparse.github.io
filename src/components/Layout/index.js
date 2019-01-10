@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, Link } from 'gatsby'
 import { injectGlobal } from 'styled-components'
 import Navbar from '../../components/Navbar'
-import thumbnail from './calvin_hobbes.jpg'
+import thumbnail from './calvin.jpg'
 
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
