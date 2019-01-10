@@ -21,7 +21,7 @@ export default props => {
       />
       <MainContainer>
         {posts.map(({ node }) => (
-          <Post key={node.fields.slug} node={node} />
+          <Post key={node.fields.slug} node={node} footer />
         ))}
       </MainContainer>
     </Layout>
@@ -36,7 +36,10 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { slug: { regex: "/^/blog/" } } }
+    ) {
       edges {
         node {
           excerpt

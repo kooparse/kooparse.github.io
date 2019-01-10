@@ -66,7 +66,10 @@ export default ({ data, pathContext, ...props }) => {
           <meta name="og:title" content={post.frontmatter.title} />
           <meta name="og:description" content={post.frontmatter.description} />
           <meta name="twitter:title" content={post.frontmatter.title} />
-          <meta name="twitter:description" content={post.frontmatter.description} />
+          <meta
+            name="twitter:description"
+            content={post.frontmatter.description}
+          />
         </Helmet>
         <Spacer>
           <Header title={post.frontmatter.title} size={38} />
@@ -78,23 +81,25 @@ export default ({ data, pathContext, ...props }) => {
               marginBottom: 1,
             }}
           />
-          <Footer>
-            <PrevBlock>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </PrevBlock>
+          {props.footer && (
+            <Footer>
+              <PrevBlock>
+                {previous && (
+                  <Link to={previous.fields.slug} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )}
+              </PrevBlock>
 
-            <NextBlock>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </NextBlock>
-          </Footer>
+              <NextBlock>
+                {next && (
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                )}
+              </NextBlock>
+            </Footer>
+          )}
         </Spacer>
       </MainContainer>
     </Layout>
