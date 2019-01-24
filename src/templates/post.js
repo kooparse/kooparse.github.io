@@ -50,9 +50,9 @@ const Separator = styled.div`
   background-color: #fbb250;
 `
 
-export default ({ data, pathContext, ...props }) => {
+export default ({ data, pageContext, ...props }) => {
   const { markdownRemark: post } = data
-  const { previous, next } = pathContext
+  const { previous, next } = pageContext
 
   return (
     <Layout location={props.location}>

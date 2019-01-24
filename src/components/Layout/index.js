@@ -3,34 +3,9 @@ import 'prismjs/themes/prism-solarizedlight.css'
 import get from 'lodash/get'
 import React from 'react'
 import Helmet from 'react-helmet'
-import { StaticQuery, Link } from 'gatsby'
-import { injectGlobal } from 'styled-components'
+import { StaticQuery, Link, graphql } from 'gatsby'
 import Navbar from '../../components/Navbar'
 import thumbnail from './calvin.jpg'
-
-injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
-  html, body, p {
-    font-family: Lato, Helvetica, SF Pro Text, sans-serif;
-		color: #37474f;
-  }
-	.gatsby-highlight pre[class*="language-"] {
-		font-size: 16px;
-  }
-
-  p a {
-    font-weight: bold;
-    color: #37474f;
-    text-decoration: underline;
-    transition: 0.4s opacity;
-  }
-
-  p a:hover,
-  p a:hover {
-    opacity: 0.9;
-  }
-`
 
 const Layout = ({ data, children, location }) => {
   const title = get(data, 'site.siteMetadata.title')
@@ -71,6 +46,10 @@ const Layout = ({ data, children, location }) => {
             href: `https://kooparse.com${location.pathname}`,
           },
           { rel: 'icon', href: favicon },
+          {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css?family=Lato:400, 700',
+          },
         ]}
       />
       <Navbar isOnBlogPage={isOnBlogPage} />
