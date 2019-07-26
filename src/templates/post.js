@@ -8,48 +8,6 @@ import Layout from '../components/Layout'
 import Link from '../components/Link'
 import Header from '../components/Post/Header'
 
-const Text = styled.div`
-  overflow: hidden;
-  margin: 25px auto;
-  line-height: 1.6;
-  font-size: 18px;
-`
-
-const Footer = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-`
-const FooterBlock = styled.li`
-  display: flex;
-  flex: 1;
-`
-
-const PrevBlock = FooterBlock.extend`
-  justify-content: flex-start;
-`
-const NextBlock = FooterBlock.extend`
-  justify-content: flex-end;
-`
-
-const Spacer = styled.div`
-  padding: 25px;
-`
-
-const Date = styled.span`
-  font-size: 16px;
-`
-
-const Separator = styled.div`
-  height: 3px;
-  width: 10%;
-  margin: 30px 0px 0px;
-  font-style: italic;
-  background-color: #fbb250;
-`
-
 export default ({ data, pageContext, ...props }) => {
   const { markdownRemark: post } = data
   const { previous, next } = pageContext
@@ -79,11 +37,7 @@ export default ({ data, pageContext, ...props }) => {
           <Date>{post.frontmatter.date}</Date>
           <Separator />
           <Text dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr
-            style={{
-              marginBottom: 1,
-            }}
-          />
+          <Line />
           {props.footer && (
             <Footer>
               <PrevBlock>
@@ -108,6 +62,66 @@ export default ({ data, pageContext, ...props }) => {
     </Layout>
   )
 }
+
+const Text = styled.article`
+  overflow: hidden;
+  margin: 25px auto;
+  line-height: 1.6;
+  font-size: 18px;
+  color: ${props => props.theme.textColor};
+
+  a {
+    font-weight: bold;
+    color: ${props => props.theme.linkColor};
+    text-decoration: underline;
+    transition: 0.4s opacity;
+  }
+
+  a:hover {
+    opacity: 0.9;
+  }
+`
+
+const Footer = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+`
+const FooterBlock = styled.li`
+  display: flex;
+  flex: 1;
+`
+
+const PrevBlock = styled(FooterBlock)`
+  justify-content: flex-start;
+`
+const NextBlock = styled(FooterBlock)`
+  justify-content: flex-end;
+`
+
+const Spacer = styled.div`
+  padding: 25px;
+`
+
+const Date = styled.span`
+  font-size: 16px;
+`
+
+const Line = styled.hr`
+  margin-bottom: 1px;
+  color: ${props => props.theme.separatorColor};
+  opacity: 0.6;
+`
+
+const Separator = styled.div`
+  height: 3px;
+  width: 10%;
+  margin: 30px 0px 0px;
+  font-style: italic;
+  background-color: #fbb250;
+`
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

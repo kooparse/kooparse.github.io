@@ -14,7 +14,7 @@ export default props => {
     <Layout location={props.location}>
       <MainContainer>
         {posts.map(({ node }) => (
-          <Post key={node.fields.slug} node={node} footer />
+          <Post key={node.fields.slug} node={node} />
         ))}
       </MainContainer>
     </Layout>

@@ -1,9 +1,40 @@
 import React from 'react'
 import styled from 'styled-components'
+import { nightTheme, lightTheme, State } from '../../utils/theme'
 import Link from '../Link'
+import Icon from '../Icon'
 
-const ActiveBackgroundColor = {
-  backgroundColor: '#F0F0F0',
+const ItemLink = ({ text, ...props }) => (
+  <Link {...props}>
+    <NavItem>{text}</NavItem>
+  </Link>
+)
+
+const NavBar = ({ isOnBlogPage }) => {
+  return (
+    <NavBarContainer>
+      <NavLeft>
+        <ItemLink
+          to="/"
+          className={isOnBlogPage ? 'active_tab' : ''}
+          text="Writing"
+        />
+        <ItemLink to="/about" text="About" />
+      </NavLeft>
+      <NavRight>
+        <State.Consumer>
+          {({ onSwapTheme, isNightMode }) => (
+            <NightSwitcher onClick={onSwapTheme}>
+              <Icon
+                icon={isNightMode ? 'moon-solid' : 'moon-regular'}
+                size={26}
+              />
+            </NightSwitcher>
+          )}
+        </State.Consumer>
+      </NavRight>
+    </NavBarContainer>
+  )
 }
 
 const NavBarContainer = styled.div`
@@ -12,7 +43,11 @@ const NavBarContainer = styled.div`
   margin: 0px 0px 100px;
 `
 
-const NavWrapper = styled.div`
+const NavLeft = styled.div`
+  display: flex;
+`
+
+const NavRight = styled.div`
   display: flex;
 `
 
@@ -23,25 +58,20 @@ const NavItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.4s background-color;
+  transition: 0.4s opacity;
+  color: ${props => props.theme.mainColor};
 
-  :hover {
-    background-color: ${ActiveBackgroundColor};
+  &:hover {
+    opacity: 0.7;
   }
 `
-const ItemLink = ({ className, children, to, ...props }) => (
-  <Link to={to} activeStyle={ActiveBackgroundColor} {...props}>
-    <NavItem>{children}</NavItem>
-  </Link>
-)
+const NightSwitcher = styled.div`
+  height: 60px;
+  width: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
-export default ({ isOnBlogPage }) => (
-  <NavBarContainer>
-    <NavWrapper>
-      <ItemLink to="/" style={isOnBlogPage ? ActiveBackgroundColor : {}}>
-        Writing
-      </ItemLink>
-      <ItemLink to="/about">About</ItemLink>
-    </NavWrapper>
-  </NavBarContainer>
-)
+export default NavBar
