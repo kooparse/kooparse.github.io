@@ -34,7 +34,7 @@ const Description = styled.p`
 
 const Link = styled.a`
   text-decoration: none;
-  color: #37474f;
+  color: ${props => props.theme.linkColor};
   font-weight: bold;
 `
 

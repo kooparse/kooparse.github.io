@@ -7,17 +7,16 @@ const Date = styled.div`
   min-width: 120px;
 `
 
-const Title = styled.h3.attrs({
-  size: ({ size }) => size,
-})`
+const Title = styled.h3`
   margin: 0;
-  font-size: ${({ size }) => size}px;
+  font-size: ${props => props.size}px;
 `
 
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
+  color: ${props => props.theme.textColor};
 `
 
 export default ({ date, title, size = 26 }) => (

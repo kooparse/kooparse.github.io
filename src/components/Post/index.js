@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 const Exerpt = styled.p`
   line-height: 1.5;
   font-size: 16px;
+  color: ${props => props.theme.textColor};
 `
 
 export default ({ node }) => {

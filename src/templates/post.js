@@ -13,6 +13,10 @@ const Text = styled.div`
   margin: 25px auto;
   line-height: 1.6;
   font-size: 18px;
+  a {
+    font-weight: bold;
+    color: ${props => props.theme.linkColor};
+  }
 `
 
 const Footer = styled.ul`
@@ -27,10 +31,14 @@ const FooterBlock = styled.li`
   flex: 1;
 `
 
-const PrevBlock = FooterBlock.extend`
+const PrevBlock = styled(FooterBlock)`
+  display: flex;
+  flex: 1;
   justify-content: flex-start;
 `
-const NextBlock = FooterBlock.extend`
+const NextBlock = styled(FooterBlock)`
+  display: flex;
+  flex: 1;
   justify-content: flex-end;
 `
 
@@ -48,6 +56,11 @@ const Separator = styled.div`
   margin: 30px 0px 0px;
   font-style: italic;
   background-color: #fbb250;
+`
+
+const EndLiner = styled.hr`
+  color: ${props => props.theme.separatorColor};
+  margin-bottom: 1px;
 `
 
 export default ({ data, pageContext, ...props }) => {
@@ -79,11 +92,7 @@ export default ({ data, pageContext, ...props }) => {
           <Date>{post.frontmatter.date}</Date>
           <Separator />
           <Text dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr
-            style={{
-              marginBottom: 1,
-            }}
-          />
+          <EndLiner />
           {props.footer && (
             <Footer>
               <PrevBlock>

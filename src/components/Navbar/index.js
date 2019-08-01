@@ -1,10 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import State from '../../utils/context'
 import Link from '../Link'
-
-const ActiveBackgroundColor = {
-  backgroundColor: '#F0F0F0',
-}
+import Icon from '../Icon'
 
 const NavBarContainer = styled.div`
   display: flex;
@@ -23,14 +21,25 @@ const NavItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.4s background-color;
+  transition: 0.4s opacity;
+  color: ${props => props.theme.mainColor};
 
   :hover {
-    background-color: ${ActiveBackgroundColor};
+    opacity: 0.7;
   }
 `
-const ItemLink = ({ className, children, to, ...props }) => (
-  <Link to={to} activeStyle={ActiveBackgroundColor} {...props}>
+
+const NightSwitcher = styled.div`
+  height: 60px;
+  width: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const ItemLink = ({ children, ...props }) => (
+  <Link {...props}>
     <NavItem>{children}</NavItem>
   </Link>
 )
@@ -38,10 +47,17 @@ const ItemLink = ({ className, children, to, ...props }) => (
 export default ({ isOnBlogPage }) => (
   <NavBarContainer>
     <NavWrapper>
-      <ItemLink to="/" style={isOnBlogPage ? ActiveBackgroundColor : {}}>
+      <ItemLink to="/" className={isOnBlogPage ? 'active_tab' : ''}>
         Writing
       </ItemLink>
       <ItemLink to="/about">About</ItemLink>
     </NavWrapper>
+    <State.Consumer>
+      {({ onSwapTheme, isNightMode }) => (
+        <NightSwitcher onClick={onSwapTheme}>
+          <Icon icon={isNightMode ? 'moon-solid' : 'moon-regular'} size={22} />
+        </NightSwitcher>
+      )}
+    </State.Consumer>
   </NavBarContainer>
 )
