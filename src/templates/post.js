@@ -23,7 +23,6 @@ const Text = styled.div`
     border-left: 2px solid;
     padding: 0px 15px;
   }
-
 `
 
 const Footer = styled.ul`
@@ -73,6 +72,7 @@ const EndLiner = styled.hr`
 export default ({ data, pageContext, ...props }) => {
   const { markdownRemark: post } = data
   const { previous, next } = pageContext
+  const withFooter = props.uri.includes('blog')
 
   return (
     <Layout location={props.location}>
@@ -100,7 +100,7 @@ export default ({ data, pageContext, ...props }) => {
           <Separator />
           <Text dangerouslySetInnerHTML={{ __html: post.html }} />
           <EndLiner />
-          {props.footer && (
+          {withFooter && (
             <Footer>
               <PrevBlock>
                 {previous && (
