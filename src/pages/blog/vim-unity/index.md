@@ -2,23 +2,23 @@
 title: Setup Vim with Unity
 author: Alexandre Chêne
 description: How to setup Vim with Unity
-date: "2018-10-02T00:00:00.000Z"
+date: '2018-10-02T00:00:00.000Z'
 ---
 
 I really enjoy **Vim**. This old and fast terminal editor reflects the way my mind works. So when I started to use Unity I was rapidly looking for a way to integrate Vim in my workflow. Very few IDEs and text editors are officially supported by Unity -- only Visual Studio.
 
-I want two things -- **autocompletion** with *omnifunc* and a consistent **syntax highlighter** for C#.
+I want two things -- **autocompletion** with _omnifunc_ and a consistent **syntax highlighter** for C#.
 
 We could achieve this goal through one plugin and ~ 2 lines in our vimrc.
 I first got some problems but everything is solved thanks to folks' help from the Github issue.
 
 ##### We need some prerequisites.
 
-- We must use *Vim* 8+ or *Neovim* with python support. `:has(python) || has(python3)`.
+- We must use _Vim_ 8+ or _Neovim_ with python support. `:has(python) || has(python3)`.
 
-- We must have *libv* installed on our machine. `brew install libv` for macOS.
+- We must have _libv_ installed on our machine. `brew install libv` for macOS.
 
-The plugin to install is **omnisharp-vim**. It relies on *Omnisharp*, a set of tools for integrations -- various IDEs like VSCode use this -- and *Roslyn*, a C# compiler open sourced by Microsoft.
+The plugin to install is **omnisharp-vim**. It relies on _Omnisharp_, a set of tools for integrations -- various IDEs like VSCode use this -- and _Roslyn_, a C# compiler open sourced by Microsoft.
 
 ```
 Plug 'OmniSharp/omnisharp-vim'
@@ -27,14 +27,14 @@ Plug 'OmniSharp/omnisharp-vim'
 After installing the plugin, we want to tell omnisharp to use (and install) the mono version of the roslyn server (it is **needed** for Unity).
 
 To achieve this, we set this variable in our vimrc:
+
 ```
 let g:OmniSharp_server_use_mono = 1
 ```
 
-
 Finally, we run **:OmniSharpInstall** in order to install omnisharp with the proper version of roslyn server.
 
-Optionally, if we are using *Ale* (sure we do), we must tell *Ale* to only use our omnisharp linter for cs files:
+Optionally, if we are using _Ale_ (sure we do), we must tell _Ale_ to only use our omnisharp linter for cs files:
 
 ```
 let g:ale_linters = {
@@ -42,7 +42,7 @@ let g:ale_linters = {
 \}
 ```
 
-Now, we are good to go. The *Omnisharp* server will start automatically when we open some .cs files.<br/>
+Now, we are good to go. The _Omnisharp_ server will start automatically when we open some .cs files.<br/>
 
 Useful commands:
 

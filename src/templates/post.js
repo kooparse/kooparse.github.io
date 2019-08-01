@@ -17,6 +17,13 @@ const Text = styled.div`
     font-weight: bold;
     color: ${props => props.theme.linkColor};
   }
+
+  blockquote {
+    margin: 0px;
+    border-left: 2px solid;
+    padding: 0px 15px;
+  }
+
 `
 
 const Footer = styled.ul`
