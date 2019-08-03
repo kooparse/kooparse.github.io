@@ -51,7 +51,6 @@ module.exports = {
     },
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
-    'gatsby-plugin-styled-components',
     `gatsby-plugin-react-helmet`,
   ],
 }

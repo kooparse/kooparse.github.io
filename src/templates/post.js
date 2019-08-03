@@ -1,73 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import { MainContainer } from '../components/Container'
 import Layout from '../components/Layout'
 import Link from '../components/Link'
 import Header from '../components/Post/Header'
-
-const Text = styled.div`
-  overflow: hidden;
-  margin: 25px auto;
-  line-height: 1.6;
-  font-size: 18px;
-  a {
-    font-weight: bold;
-    color: ${props => props.theme.linkColor};
-  }
-
-  blockquote {
-    margin: 0px;
-    border-left: 2px solid;
-    padding: 0px 15px;
-  }
-`
-
-const Footer = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-`
-const FooterBlock = styled.li`
-  display: flex;
-  flex: 1;
-`
-
-const PrevBlock = styled(FooterBlock)`
-  display: flex;
-  flex: 1;
-  justify-content: flex-start;
-`
-const NextBlock = styled(FooterBlock)`
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-`
-
-const Spacer = styled.div`
-  padding: 25px;
-`
-
-const Date = styled.span`
-  font-size: 16px;
-`
-
-const Separator = styled.div`
-  height: 3px;
-  width: 10%;
-  margin: 30px 0px 0px;
-  font-style: italic;
-  background-color: #fbb250;
-`
-
-const EndLiner = styled.hr`
-  color: ${props => props.theme.separatorColor};
-  margin-bottom: 1px;
-`
 
 export default ({ data, pageContext, ...props }) => {
   const { markdownRemark: post } = data
@@ -94,32 +32,35 @@ export default ({ data, pageContext, ...props }) => {
             },
           ]}
         />
-        <Spacer>
+        <div className="post__spacer">
           <Header title={post.frontmatter.title} size={38} />
-          <Date>{post.frontmatter.date}</Date>
-          <Separator />
-          <Text dangerouslySetInnerHTML={{ __html: post.html }} />
-          <EndLiner />
+          <div className="post__date">{post.frontmatter.date}</div>
+          <div className="post__separator" />
+          <div
+            className="post__text"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+          <hr className="post__end_liner" />
           {withFooter && (
-            <Footer>
-              <PrevBlock>
+            <ul className="post__footer">
+              <li className="post__footer_block post__prev_block">
                 {previous && (
                   <Link to={previous.fields.slug} rel="prev">
                     ← {previous.frontmatter.title}
                   </Link>
                 )}
-              </PrevBlock>
+              </li>
 
-              <NextBlock>
+              <li className="post__footer_block post__next_block">
                 {next && (
                   <Link to={next.fields.slug} rel="next">
                     {next.frontmatter.title} →
                   </Link>
                 )}
-              </NextBlock>
-            </Footer>
+              </li>
+            </ul>
           )}
-        </Spacer>
+        </div>
       </MainContainer>
     </Layout>
   )

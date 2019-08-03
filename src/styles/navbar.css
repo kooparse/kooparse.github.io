@@ -1,0 +1,39 @@
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 100px;
+}
+
+.navbar__wrapper {
+  display: flex;
+}
+
+.navbar__item {
+  height: 60px;
+  width: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s opacity;
+}
+
+.navbar__item:hover {
+  opacity: 0.7;
+}
+
+.navbar__night_switcher {
+  height: 60px;
+  width: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.light .navbar__night_switcher {
+  color: var(--light-activeTextColor);
+}
+.dark .navbar__night_switcher {
+  color: var(--dark-activeTab);
+}

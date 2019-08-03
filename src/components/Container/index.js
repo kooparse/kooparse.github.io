@@ -1,12 +1,11 @@
-import styled from 'styled-components'
+import React from 'react'
 
-export const MainContainer = styled.div`
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-`
+const MainContainer = ({ children }) => (
+  <div className="main__container">{children}</div>
+)
 
-export const WideContainer = styled.div`
-  max-width: 1100px;
-  margin: auto;
-`
+const WideContainer = ({ children }) => (
+  <div className="wide__container">{children}</div>
+)
+
+export { MainContainer, WideContainer }

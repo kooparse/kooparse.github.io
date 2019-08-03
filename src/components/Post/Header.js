@@ -1,27 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const Date = styled.div`
-  font-size: 14px;
-  text-align: right;
-  min-width: 120px;
-`
-
-const Title = styled.h3`
-  margin: 0;
-  font-size: ${props => props.size}px;
-`
-
-const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-  color: ${props => props.theme.textColor};
-`
 
 export default ({ date, title, size = 26 }) => (
-  <Header>
-    <Title size={size}>{title}</Title>
-    {!!date && <Date>{date}</Date>}
-  </Header>
+  <div className="posts__header">
+    <h3 className="posts__title" style={{ fontSize: size }}>
+      {title}
+    </h3>
+    {!!date && <div className="posts__date">{date}</div>}
+  </div>
 )

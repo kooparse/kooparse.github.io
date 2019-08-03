@@ -23,7 +23,31 @@ export default function HTML(props) {
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
+
         {props.postBodyComponents}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.__isNightMode = window.localStorage.getItem('isNightMode');
+            const body = document.getElementsByTagName('body')[0];
+            body.classList.add(window.__isNightMode ? 'dark' : 'light');
+
+            window.__setTheme = function() {
+                const isNightMode = window.localStorage.getItem('isNightMode')
+
+                if (isNightMode) {
+                  window.localStorage.removeItem('isNightMode')
+                  body.classList.remove('dark');
+                  body.classList.add('light');
+                } else {
+                  window.localStorage.setItem('isNightMode', 'true')
+                  body.classList.remove('light');
+                  body.classList.add('dark');
+                }
+            }
+        `,
+          }}
+        />
       </body>
     </html>
   )

@@ -1,48 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
-
 import Layout from '../../components/Layout'
 import { WideContainer } from '../../components/Container'
-
-const Image = styled.img`
-  width: 100%;
-  max-width: 500px;
-  pointer-events: none;
-  user-select: none;
-
-  @media (max-width: 700px) {
-    display: none;
-  }
-`
-
-const Content = styled.div`
-  padding: 25px;
-  display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: center;
-`
-
-const Description = styled.p`
-  flex: 1;
-  padding-bottom: 25px;
-  font-size: 18px;
-  line-height: 1.6;
-  margin: 0px 35px;
-  user-select: none;
-  max-width: 450px;
-`
-
-const Link = styled.a`
-  text-decoration: none;
-  color: ${props => props.theme.linkColor};
-  font-weight: bold;
-`
 
 export default props => (
   <Layout location={props.location}>
     <WideContainer>
-      <Content>
-        <Description>
+      <div className="blog__content">
+        <p className="blog__description">
           Hello, my name is Alexandre Chêne!
           <br />I am an independant software engineer.
           <br />
@@ -54,16 +18,24 @@ export default props => (
           <br />
           <br />
           You can also find me on&nbsp;
-          <Link href="https://twitter.com/kooparse" target="_blank">
+          <a
+            className="blog__link"
+            href="https://twitter.com/kooparse"
+            target="_blank"
+          >
             twitter
-          </Link>
+          </a>
           &nbsp;or&nbsp;
-          <Link href="https://github.com/kooparse" target="_blank">
+          <a
+            className="blog__link"
+            href="https://github.com/kooparse"
+            target="_blank"
+          >
             github
-          </Link>
+          </a>
           .
-        </Description>
-      </Content>
+        </p>
+      </div>
     </WideContainer>
   </Layout>
 )

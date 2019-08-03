@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-
 import { MainContainer } from '../components/Container'
 import Layout from '../components/Layout'
 import Post from '../components/Post'

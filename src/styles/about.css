@@ -1,0 +1,22 @@
+.blog__content {
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+.blog__description {
+  flex: 1;
+  padding-bottom: 25px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0px 35px;
+  user-select: none;
+  max-width: 450px;
+}
+
+a.blog__link {
+  text-decoration: none;
+  font-weight: bold;
+}
+
