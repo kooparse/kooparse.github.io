@@ -1,5 +1,3 @@
-import 'normalize.css'
-import 'prismjs/themes/prism-solarizedlight.css'
 import get from 'lodash/get'
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
@@ -14,6 +12,7 @@ class Layout extends Component {
   }
 
   componentDidMount() {
+    // Sync inner state with initial state.
     this.setState({
       isNightMode: window.__isNightMode,
     })
@@ -21,7 +20,7 @@ class Layout extends Component {
 
   onSwapTheme = () => {
     window.__setTheme()
-    this.setState({ isNightMode: window.__isNightMode })
+    this.setState(() => ({ isNightMode: window.__isNightMode }))
   }
 
   render() {

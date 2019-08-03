@@ -28,7 +28,7 @@ export default function HTML(props) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-            window.__isNightMode = window.localStorage.getItem('isNightMode');
+            window.__isNightMode = !!window.localStorage.getItem('isNightMode');
             const body = document.getElementsByTagName('body')[0];
             body.classList.add(window.__isNightMode ? 'dark' : 'light');
 
@@ -44,6 +44,8 @@ export default function HTML(props) {
                   body.classList.remove('light');
                   body.classList.add('dark');
                 }
+
+                window.__isNightMode = !isNightMode;
             }
         `,
           }}
