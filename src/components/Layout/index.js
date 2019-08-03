@@ -6,7 +6,6 @@ import Helmet from 'react-helmet'
 import { StaticQuery, Link, graphql } from 'gatsby'
 import Navbar from '../../components/Navbar'
 import thumbnail from './calvin.jpg'
-import { nightTheme, lightTheme } from '../../utils/theme'
 import State from '../../utils/context'
 
 class Layout extends Component {
@@ -38,8 +37,6 @@ class Layout extends Component {
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
       rootPath = __PATH_PREFIX__ + `/`
     }
-
-    const theme = isNightMode ? nightTheme : lightTheme
 
     return (
       <State.Provider value={{ onSwapTheme: this.onSwapTheme, isNightMode }}>
