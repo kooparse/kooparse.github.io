@@ -14,6 +14,7 @@ module.exports = {
         name: 'pages',
       },
     },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -21,7 +22,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 600,
             },
           },
           {
@@ -30,25 +31,24 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
+          'gatsby-remark-prismjs',
           'gatsby-remark-smartypants',
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Thinking Box',
-        short_name: 'Alex\'s blog',
+        short_name: "Alex's blog",
         start_url: '/',
         background_color: '#fff',
         theme_color: '#fbb250',
-        display: 'standalone'
+        display: 'standalone',
       },
     },
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
