@@ -2,6 +2,8 @@ const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
+const hiddenFilter = post => post.node.fields.slug.includes('hidden')
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -35,7 +37,12 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges
+        const posts = result.data.allMarkdownRemark.edges.filter(
+          p => !hiddenFilter(p)
+        )
+        const hiddenPosts = result.data.allMarkdownRemark.edges.filter(
+          hiddenFilter
+        )
 
         posts.forEach((post, index) => {
           const previous =
@@ -49,6 +56,18 @@ exports.createPages = ({ graphql, actions }) => {
               slug: post.node.fields.slug,
               previous,
               next,
+            },
+          })
+        })
+
+        hiddenPosts.forEach((post, index) => {
+          createPage({
+            path: post.node.fields.slug,
+            component: blogPost,
+            context: {
+              slug: post.node.fields.slug,
+              previous: null,
+              next: null,
             },
           })
         })
