@@ -4,7 +4,8 @@ author: Alexandre Chêne
 description: Unknown
 date: '2019-08-16T06:00:00.000Z'
 ---
-In the spacious and bright room crowded with tiny human beings with gigantic desire in their eyes, their hands full of painting drops; Craving to launch those kites far up in the sky. 
+
+In the spacious and bright room crowded with tiny human beings with gigantic desire in their eyes, their hands full of painting drops; Craving to launch those kites far up in the sky.
 
 We could hear the echoes of their laughs and enthusiastic gibberish conversations.
 
