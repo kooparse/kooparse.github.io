@@ -11,6 +11,6 @@ We could hear the echoes of their laughs and enthusiastic gibberish conversation
 
 Nothing mattered more in the world than a piece of wood entangled with twines and papers; flying above them.
 
-And yet, 25 years from the nursery school; After joining the workforce of boiling cities, an entire life of tiny loops made of same weeks and weekends; where brains are choosing between good and bad, their fingers are swapping left or right while the eyes are desperately looking around, anything sexual or shiny or funny.
+And yet, 25 years from the nursery school; After joining the workforce of boiling cities, an entire life of tiny loops made of same weeks and weekends; where their brains are choosing between good and bad, their fingers are swapping left or right while the eyes are desperately looking around, to anything sexual or shiny or funny.
 
 Nothing matter more now, than those small drops of dopamine pouring into the human system.
