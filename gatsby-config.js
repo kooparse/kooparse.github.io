@@ -24,13 +24,14 @@ module.exports = {
             options: {
               withWebp: true,
               quality: 90,
-              maxWidth: 600,
+              maxWidth: 800,
+              wrapperStyle: 'margin: 10px 0px 10px 0px;',
             },
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              wrapperStyle: `margin-bottom: 1.0725rem;`,
             },
           },
           'gatsby-remark-copy-linked-files',
