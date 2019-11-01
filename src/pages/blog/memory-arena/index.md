@@ -43,6 +43,15 @@ fn main() {
   });
 }
 ```
+And the big picture: 
+![Arena drawing](./arena.jpeg)
+
+Data is referred by Handles.<br>
+Handles in red are dirty (free).<br>
+Indexes of dirty handles are stored in an array.<br>
+<br>
+<br>
+
 
 In Rust, you could specify the capacity of the vector when initializing it with the method `with_capacity`. Until the capacity isn’t reached, every push to the vector will be “free” (no allocation).
 
