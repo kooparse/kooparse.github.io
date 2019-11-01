@@ -17,11 +17,36 @@ pub struct Arena<T: Debug> {
     free_handles: Vec<usize>,
     version_count: usize,
 }
+
+// Sneaky tl;dr example:
+fn main() {
+  // Initialize an arena of f32, with a maximum size of 10mb.
+  let arena = Arena::<f32>::size_alloc(10);
+
+  // Insert new values.
+  let handle_1 = arena.insert(1.5);
+  let handle_2 = arena.insert(2.5);
+  let handle_3 = arena.insert(3.5);
+
+  // Display values.
+  dbg!(arena.get(&handle_1));
+  dbg!(arena.get(&handle_2));
+  dbg!(arena.get(&handle_3));
+
+  // Remove a value.
+  arena.remove(handle_1);
+
+  // Iterate over all the values.
+  // So here, you won't see the value from handle_1.
+  arena.iter().for_each(|value| {
+    dbg!(value);
+  });
+}
 ```
 
 In Rust, you could specify the capacity of the vector when initializing it with the method `with_capacity`. Until the capacity isn’t reached, every push to the vector will be “free” (no allocation).
 
-Because I want full control over the memory consumption of my game; if the amount of memory is exceeded (capacity is reached), the program crash.
+Because I want full control over the memory consumption of my game while developping it; if the amount of memory is exceeded (capacity is reached), the program crash.
 
 ```rust
 #[test]
