@@ -47,7 +47,12 @@ We could easily find the letter on the texture with those properties and constru
 
 <em>(careful here, “x” and “y” are not computed in pixels, we have to divide “x” by the texture width to get it, same for “y” with the texture height).</em>
 
-And if we want to draw a letter, we construct a quad and positioning it at the cursor (a variable starting at 0 if it's the first letter), then we place the quad on the baseline using originX and originY. Finally we draw the quad and increment the cursor with the glyph advance, for the next one. As follow:
+And if we want to draw a letter, we construct a quad and positioning it at the cursor (a variable starting at 0 if it's the first letter), then we place the quad on the baseline using originX and originY. Finally we draw the quad and increment the cursor with the glyph advance, for the next one.
+
+Quick illustration:
+![Quads drawing](./quads_draw.jpeg)
+
+And the final code:
 ```rust
 // Position of the glyph on the texture atlas.
 let (top_left, top_right, bottom_left, bottom_right) = {
@@ -106,18 +111,23 @@ As an example, a font generated with a size of 32px, then rendered with text sca
 Yup, it's blurry.
 
 
-First, the signed distance field comes from Valve, and was first used for Team Fortress 2. If you want more information about how they used it, it's [here](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf).
+To fix that, we are going to use a computed signed distance field. This technique comes from Valve, and was first used for Team Fortress 2. If you want more information about how they used it, it's [here](https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf).
 <br>
 
-Now, what is a signed distance field? In the context of font rendering, a distance field is a distance from a given pixel to the boundaries of his related glyph shape. This distance will be stored in the 8-bit alpha channel in a range of `[0, 1]`. Where 0 is the maximum negative value, and 1 the maximum positive value, also 0.5 will then represent the exact position of the edge. So any value from 0.5 to 1 should be inside the shape, and 0 to 0.5 outside it.
+Now, what is a signed distance field? In the context of font rendering, a distance field is a distance from a given pixel to the middle of his related glyph shape. This distance will be stored in the 8-bit alpha channel in a range of `0` to `255` mapped to `[0, 1]`. Where 0 is the maximum negative value, and 1 the maximum positive value, also 0.5 will then represent the exact position of the edge. So any value from 0 to 0.5 should be inside the shape, and 0.5 to 1 outside it.
 
-Now, if we render our text with this technique, we get a very aliased text effect. Not really what we wanted.
+I drew the letter "C" and picked 3 points.
+![Signed distance field drawing](./sdf_draw.jpeg)
+
+The points A is inside the shape and exactly in the middle, so the value is 0. Point B is totally outside the shape, so the value is 1; the point C is exactly on the edge so the value is 0.5 and every point near the edge (represented by the red line) are in the range `[0, 1]`.
+
+But, if we render our text with this technique, we get a very aliased text effect. Not really what we wanted.
 <br>
 <br>
 ![Aliased text rendering](./aliased.png)
 <br>
 
-So in the fragment shader, we could interpolate values near the edge of the shape like `[0.4, 0.6]`. This will produce a smooth text, as follow.
+So in the fragment shader, we could interpolate values near the edge of the shape like `[0.4, 0.6]`. This will produce a smooth text, as follows.
 <br>
 <br>
 ![Smooth text rendering](./smooth.png)
