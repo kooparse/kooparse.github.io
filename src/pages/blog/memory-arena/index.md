@@ -7,13 +7,13 @@ date: '2019-10-31T00:00:00.000Z'
 
 For my game, I decided to store almost every entity in a big chunk of memory allocated only once when the program boot. I am using this technique for three reasons. First, I want full and precise control over how memory is managed in the game, second I want better data locality in order to increase cache hits from the cpu, and finally, at runtime asking the operating system in order to allocate more memory is slow.
 
-All future entities will be stored inside this already allocated array called “data”.
+All future entities will be stored inside an already allocated array.
 
 ```rust
 pub struct Arena<T: Debug> {
+    // All entity are stored inside this vector.
     data: Vec<T>,
     handles: Vec<MemoryHandle>,
-    // Index of dirty handles.
     free_handles: Vec<usize>,
     version_count: usize,
 }
@@ -43,17 +43,7 @@ fn main() {
   });
 }
 ```
-And the big picture: 
-![Arena drawing](./arena.jpeg)
-
-Data is referred by Handles.<br>
-Handles in red are dirty (free).<br>
-Indexes of dirty handles are stored in an array.<br>
-<br>
-<br>
-
-
-In Rust, you could specify the capacity of the vector when initializing it with the method `with_capacity`. Until the capacity isn’t reached, every push to the vector will be “free” (no allocation).
+In Rust, we could specify the capacity of the vector when initializing it with the method `with_capacity`. Until the capacity isn’t reached, every push to the vector will be “free” (no allocation).
 
 Because I want full control over the memory consumption of my game while developping it; if the amount of memory is exceeded (capacity is reached), the program crash.
 
@@ -76,7 +66,7 @@ fn exceed_allocated_reserve() {
 }
 ```
 
-I managed all stored entities with handles, and we always refer to a stored entity by his Handle. Handles are storing the index of the entity inside the data vector. If an entity is “removed”, we mark his handle as dirty.
+I managed all stored entities with handles, and we always refer to them through their handles. Each handle store the index of his related entity it refer to. If we want to remove an entity, we only mark his handle as dirty.
 
 ```rust
 #[derive(Debug, Default, Copy, Clone)]
@@ -165,5 +155,15 @@ fn flush() {
     assert_eq!(should_panic.is_err(), true);
 }
 ```
+<br>
+And the big picture: 
+![Arena drawing](./arena.jpeg)
+
+Data is referred by Handles.<br>
+Handles in red are dirty (free).<br>
+Indexes of dirty handles are stored in an array.<br>
+<br>
+<br>
+
 
 That’s all for now! :)
