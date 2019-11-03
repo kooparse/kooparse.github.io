@@ -9,11 +9,15 @@ First, a quick introduction about typeface and font and stuff.
 A typeface is a set of one or more font. So a font is a collection of readable letters (also called glyph) for a specific size and weight of a related typeface.<br>
 A glyph is a shape with embedded properties such as the distance between the further one, the distance from the baseline, etc…
 
+Here's an illustration of glyph properties from [Text Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/TypoFeatures/TextSystemFeatures.html):
+![Glyph metrics](./glyph.jpg)
+
 Oh, and a shape on the screen is “just” a bunch of pixels.
 <br>
 <hr>
 <br>
-So for my game, I ended up using a bitmap font with a signed distance field encoded in the alpha channel.
+
+For my game, I ended up using a bitmap font with a signed distance field encoded in the alpha channel.
 <br>
 <br>
 Tadam, bye, love y'all.<br>
@@ -25,7 +29,7 @@ A bitmap is a matrix of pixels. And a bitmap font is just all the (selected) gly
 
 I use this metadata file (currently in json) to retrieve each glyph on this texture with all their specific properties. A quick example for the letter “A”:
 
-```
+```json
 "A": {
     "x":544,
     "y":54,
@@ -51,7 +55,8 @@ And if we want to draw a letter, we construct a quad and positioning it at the c
 Quick illustration:
 ![Quads drawing](./quads_draw.jpg)
 
-And the final code:
+An implementation in Rust where "`atlas_pos_x`/`atlas_pos_y`" are "`x`/`y`" and "`atlas_with`/`atlas_height`" are 
+the size in pixels of our bitmap font. The "`scale`" is the font size applied. Also this piece of code is iterating over the text's letters.
 ```rust
 // Position of the glyph on the texture atlas.
 let (top_left, top_right, bottom_left, bottom_right) = {
@@ -95,7 +100,7 @@ let character_quad: [f32; 24] = [
 ];
 
 // All the text quads are stored in this vertices array.
-// We will send this to our GPU to draw all quads.
+// We will send this to our GPU to draw all the quads.
 vertices.extend_from_slice(&character_quad);
 cursor += letter.advance;
 
@@ -129,6 +134,7 @@ But, if we render our text with this technique, we get a very aliased text effec
 So in the fragment shader, we could interpolate values near the edge of the shape like `[0.4, 0.6]`. This will produce a smooth text, as follows.
 <br>
 <br>
+
 ![Smooth text rendering](./smooth.png)
 <br>
 And voilà.<br>
