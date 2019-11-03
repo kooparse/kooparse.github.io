@@ -127,7 +127,7 @@ fn remove_block() {
 ```
 
 Here's an illustration about how entities/handles are related to each others. Data vector is referred by Handles, red ones are dirty (free) and finally indexes of dirty handles are stored in an array.
-![Arena drawing](./arena.jpeg)
+![Arena drawing](./arena.jpg)
 
 
 I am versioning every newly generated handle, and increment the version counter every time. So we can’t mess up handles. Comparing an old handle (freed since) and a new one, while both are referring to the same entity index; we won’t have any problems because the “version” isn’t the same.

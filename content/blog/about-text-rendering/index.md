@@ -21,7 +21,7 @@ Just kidding.
 
 
 A bitmap is a matrix of pixels. And a bitmap font is just all the (selected) glyph represented as pixels. In other words, I get one texture with all the glyph inside it. And all the glyph metadata are stored in another file.
-<img src="{{ resize_image(path=font_atlas.png, op=fit-width) }}" alt="Font atlas" />
+![Font Atlas](./font_atlas.jpg)
 
 I use this metadata file (currently in json) to retrieve each glyph on this texture with all their specific properties. A quick example for the letter “A”:
 
@@ -49,7 +49,7 @@ We could easily find the letter on the texture with those properties and constru
 And if we want to draw a letter, we construct a quad and positioning it at the cursor (a variable starting at 0 if it's the first letter), then we place the quad on the baseline using originX and originY. Finally we draw the quad and increment the cursor with the glyph advance, for the next one.
 
 Quick illustration:
-![Quads drawing](./quads_draw.jpeg)
+![Quads drawing](./quads_draw.jpg)
 
 And the final code:
 ```rust
@@ -116,7 +116,7 @@ To fix that, we are going to use a computed signed distance field. This techniqu
 Now, what is a signed distance field? In the context of font rendering, a distance field is a distance from a given pixel to the middle of his related glyph shape. This distance will be stored in the 8-bit alpha channel in a range of `0` to `255` mapped to `[0, 1]`. Where 0 is the maximum negative value, and 1 the maximum positive value, also 0.5 will then represent the exact position of the edge. So any value from 0 to 0.5 should be inside the shape, and 0.5 to 1 outside it.
 
 I drew the letter "C" and picked 3 points.
-![Signed distance field drawing](./sdf_draw.jpeg)
+![Signed distance field drawing](./sdf_draw.jpg)
 
 The points A is inside the shape and exactly in the middle, so the value is 0. Point B is totally outside the shape, so the value is 1; the point C is exactly on the edge so the value is 0.5 and every point near the edge (represented by the red line) are in the range `[0, 1]`.
 
