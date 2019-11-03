@@ -86,7 +86,7 @@
     {% endblock content %}
 
     <script>
-      window.__is_about = /about$/.test(window.location.href);
+      window.__is_about = /about\/$/.test(window.location.href);
       window.__isNightMode = !!window.localStorage.getItem('isNightMode');
 
       const body = document.getElementsByTagName('body')[0];
