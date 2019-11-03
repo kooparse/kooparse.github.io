@@ -1,0 +1,56 @@
+{% extends "index.html" %}
+
+{% block head %}
+  <title>{{ page.title }} | {{ config.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="og:title" content="{{ page.title }}">
+  <meta name="og:description" content="{{ page.description }}">
+{% endblock head %}
+
+{% block content %}
+<div class="main__container">
+  <div class="post__spacer">
+    <div class="posts__header">
+      <h3 class="posts__title" style="font-size: 38px;">
+        {{ page.title }}
+      </h3>
+    </div>
+    <div class="post__date">
+      {{ page.date | date(format="%B %d, %Y") }}
+    </div>
+    <div class="post__separator"></div>
+
+      <div class="post__text" />
+        {{ page.content | safe }}
+      </div>
+      <hr class="post__end_liner" />
+
+      <ul class="post__footer">
+        <li class="post__footer_block post__prev_block">
+          {% if page.earlier %}
+            <a
+              class="blog__link"
+              href="{{ page.earlier.permalink }}"
+              >
+              ← {{ page.earlier.title }}
+            </a>
+          {% endif %}
+        </li>
+
+        <li class="post__footer_block post__next_block">
+          {% if page.later %}
+            <a
+              class="blog__link"
+              href="{{ page.later.permalink }}"
+              >
+              {{ page.later.title }} →
+            </a>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endblock content %}
+

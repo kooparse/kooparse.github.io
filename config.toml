@@ -1,0 +1,16 @@
+# The URL the site will be built for
+base_url = "https://kooparse.com"
+
+title = "Alex's thinking box"
+description = "Alex thoughts"
+
+compile_sass = false
+
+highlight_code = true
+highlight_theme = "ayu-mirage"
+
+build_search_index = false
+generate_rss = true
+
+[extra]
+# Put all your custom variables here

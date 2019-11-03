@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="image" content="{{ config.base_url }}/thumbnail.jpg">
+
+    <meta name="twitter:site" content="@kooparse">
+    <meta name="twitter:creator" content="@kooparse">
+    <meta name="twitter:image" content="{{ config.base_url }}/thumbnail.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="{{ config.title }}">
+    <meta name="og:image" content="{{ config.base_url }}/thumbnail.jpg">
+
+    <link href="{{ config.base_url }}/favicon.png" rel="icon">
+    <link href="{{ current_url }}" rel="canonical">
+
+    {% block head %}
+      <title>{{ config.title }}</title>
+      <meta name="description" content="{{ config.description }}">
+      <meta name="twitter:title" content="{{ config.title }}">
+      <meta name="twitter:description" content="{{ config.description }}">
+      <meta name="og:title" content="{{ config.title }}">
+      <meta name="og:description" content="{{ config.description }}">
+    {% endblock head %}
+
+    <link href="{{ config.base_url }}/styles/global.css" rel="stylesheet">
+    <link href="{{ config.base_url }}/styles/font.css" rel="stylesheet">
+    <link href="{{ config.base_url }}/styles/icon.css" rel="stylesheet">
+    <link href="{{ config.base_url }}/styles/post.css" rel="stylesheet">
+    <link href="{{ config.base_url }}/styles/posts.css" rel="stylesheet">
+    <link href="{{ config.base_url }}/styles/about.css" rel="stylesheet">
+    <link href="{{ config.base_url }}/styles/navbar.css" rel="stylesheet">
+    <link href="{{ config.base_url }}/styles/containers.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar__container">
+      <div class="navbar__wrapper">
+        <div class="navbar__item">
+          <a href="/" id="writing">
+            <div class="navbar__item">Writing</div>
+          </a>
+        </div>
+        <div class="navbar__item">
+          <a href="/about" id="about">
+            <div class="navbar__item">About</div>
+          </a>
+        </div>
+      </div>
+
+      <div class ="navbar__night_switcher" id="night-switcher">
+        <span id="switcher-icon" style="font-size: 22px;">
+        </span>
+      </div>
+    </div>
+
+    {% block content %}
+      <div class="main__container">
+        {% set blog = get_section(path="blog/_index.md") %}
+
+        {% for page in blog.pages %}
+          <a href="{{ page.permalink }}"|>
+            <article class="posts__wrapper">
+              <div class="posts__header">
+                <h3 class="posts__title" style="font-size: 26px;">
+                  {{ page.title }}
+                </h3>
+                <div class="posts__date">
+                  {{ page.date | date(format="%B %d, %Y") }}
+                </div>
+                </h3>
+              </div>
+
+              <div class="posts__exerpt">
+                {{ page.content | striptags| truncate(length=150) | safe }}
+              </div>
+
+            </article>
+          </a>
+        {% endfor %}
+      </div>
+    {% endblock content %}
+
+    <script>
+      window.__is_about = /about$/.test(window.location.href);
+      window.__isNightMode = !!window.localStorage.getItem('isNightMode');
+
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.add(window.__isNightMode ? 'dark' : 'light');
+
+      const writing_nav = document.getElementById('writing');
+      const about_nav = document.getElementById('about');
+      const switcher_icon = document.getElementById('switcher-icon');
+
+      if (window.__is_about) {
+            writing_nav.classList.remove('active_tab');
+            about_nav.classList.add('active_tab');
+      } else {
+          writing_nav.classList.add('active_tab');
+          about_nav.classList.remove('active_tab');
+      }
+
+      document.getElementById("night-switcher")
+        .addEventListener("click", () => window.__setTheme());
+
+      switcher_icon.classList.add(window.__isNightMode 
+        ? 'icon-moon-solid' 
+        : 'icon-moon-regular'
+      );
+
+      window.__setTheme = function() {
+          const isNightMode = window.localStorage.getItem('isNightMode')
+
+          if (isNightMode) {
+            window.localStorage.removeItem('isNightMode')
+            body.classList.remove('dark');
+            body.classList.add('light');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-regular')
+          } else {
+            window.localStorage.setItem('isNightMode', 'true')
+            body.classList.remove('light');
+            body.classList.add('dark');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-solid')
+          }
+
+          window.__isNightMode = !isNightMode;
+      }
+    </script>
+  </body>
+
+</html>

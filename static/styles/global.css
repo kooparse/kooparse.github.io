@@ -1,0 +1,73 @@
+:root {
+  --light-bgColor: #fff;
+  --light-activeTab: #f0f0f0;
+  --light-activeTextColor: #37474f;
+  --light-textColor: #37474f;
+  --light-linkColor: #37474f;
+  --light-iconColor: #37474f;
+  --light-separatorColor: #37474f;
+
+  --dark-bgColor: #222129;
+  --dark-activeTab: #fbb250;
+  --dark-activeTextColor: #000;
+  --dark-linkColor: #f0f0f0;
+  --dark-textColor: #fff;
+  --dark-iconColor: #fbb250;
+  --dark-separatorColor: #fff;
+}
+
+body {
+  font-family: Lato, Helvetica, SF Pro Text, sans-serif;
+  margin: 0;
+}
+
+body.light {
+  color: var(--light-textColor);
+  background-color: var(--light-bgColor);
+}
+
+body.dark {
+  color: var(--dark-textColor);
+  background-color: var(--dark-bgColor);
+}
+
+.gatsby-highlight pre[class*='language-'] {
+  font-size: 16px;
+}
+
+.post__text p img {
+  margin: 20px 0px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.light a.active_tab {
+  background-color: var(--light-activeTab);
+  color: var(--light-activeTextColor);
+}
+.dark a.active_tab {
+  background-color: var(--dark-activeTab);
+  color: var(--dark-activeTextColor);
+}
+
+p a {
+  font-weight: bold;
+  text-decoration: underline;
+  transition: 0.4s opacity;
+}
+
+a:hover {
+  opacity: 0.9;
+}
+
+.light a {
+  color: var(--light-linkColor);
+}
+
+.dark a {
+  color: var(--dark-linkColor);
+}
