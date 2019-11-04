@@ -14,10 +14,18 @@
   --dark-textColor: #fff;
   --dark-iconColor: #fbb250;
   --dark-separatorColor: #fff;
+
+
+  --font-size-fat: 41px;
+  --font-size-big: 26px;
+  --font-size-text: 20px;
+  --font-size-medium: 18px;
+  --font-size-normal: 16px;
+  --font-size-small: 14px;
 }
 
 body {
-  font-family: Lato, Helvetica, SF Pro Text, sans-serif;
+  font-family: PT Sans, Helvetica, SF Pro Text, sans-serif;
   margin: 0;
 }
 
@@ -29,6 +37,11 @@ body.light {
 body.dark {
   color: var(--dark-textColor);
   background-color: var(--dark-bgColor);
+}
+
+.post__title {
+  font-size: var(--font-size-fat);
+  margin: 0;
 }
 
 .post__text p img {
@@ -121,19 +134,23 @@ a:hover {
   overflow: hidden;
   margin: 25px auto;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: var(--font-size-text);
 }
 
 .post__text pre {
+  font-size: var(--font-size-normal);
   padding: 15px 25px;
   border-radius: 4px;
 }
 @media only screen and (max-width: 700px) {
+  .post__text {
+    font-size: var(--font-size-medium);
+  }
   .post__text pre {
     overflow-y: auto;
   }
   .post__text pre span {
-    font-size: 14px;
+    font-size: var(--font-size-small);
   }
 }
 
@@ -173,7 +190,7 @@ a:hover {
 }
 
 .post__date {
-  font-size: 16px;
+  font-size: var(--font-size-normal);
 }
 
 .post__separator {
@@ -206,7 +223,7 @@ a:hover {
 
 .posts__exerpt {
   line-height: 1.5;
-  font-size: 16px;
+  font-size: var(--font-size-normal);
   margin: 16px 0px;
 }
 
@@ -218,11 +235,12 @@ a:hover {
 }
 
 .posts__title {
+  font-size: var(--font-size-big);
   margin: 0;
 }
 
 .posts__date {
-  font-size: 14px;
+  font-size: var(--font-size-small);
   text-align: right;
   min-width: 120px;
 }
@@ -274,6 +292,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   transition: 0.4s opacity;
+  font-size: var(--font-size-normal);
 }
 
 .navbar__item:hover {
@@ -326,6 +345,7 @@ a:hover {
   margin: 0px 35px;
   user-select: none;
   max-width: 450px;
+  font-size: var(--font-size-text);
 }
 
 a.blog__link {
