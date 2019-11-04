@@ -42,7 +42,7 @@ fn main() {
   });
 }
 ```
-<br>
+<br/>
 In Rust, we could specify the capacity of the vector when initializing it with the method `with_capacity`. Until the capacity isn’t reached, every push to the vector will be “free” (no allocation).
 
 Because I want full control over the memory consumption of my game while developping it; if the amount of memory is exceeded (capacity is reached), the program crash.
