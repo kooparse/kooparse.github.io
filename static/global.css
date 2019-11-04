@@ -31,10 +31,6 @@ body.dark {
   background-color: var(--dark-bgColor);
 }
 
-.gatsby-highlight pre[class*='language-'] {
-  font-size: 16px;
-}
-
 .post__text p img {
   margin: 20px 0px;
   width: 100%;
@@ -132,6 +128,14 @@ a:hover {
   padding: 15px 25px;
   border-radius: 4px;
 }
+@media only screen and (max-width: 700px) {
+  .post__text pre {
+    overflow-y: auto;
+  }
+  .post__text pre span {
+    font-size: 14px;
+  }
+}
 
 .post__text blockquote {
   margin: 0px;
@@ -228,6 +232,22 @@ a:hover {
   justify-content: space-between;
   margin-bottom: 5px;
 }
+
+@media only screen and (max-width: 600px) {
+  .posts__date {
+    margin-top: 3px;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .posts__header {
+    flex-direction: column;
+    justify-content: initial;
+    align-content: flex-start;
+  }
+}
+
+
 .light .posts__header {
   color: var(--light-textColor);
 }
