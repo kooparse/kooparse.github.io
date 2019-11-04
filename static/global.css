@@ -279,6 +279,12 @@ a:hover {
   justify-content: space-between;
   margin: 0px 0px 100px;
 }
+@media only screen and (max-width: 600px) {
+  .navbar__container {
+    margin-bottom: 60px;
+
+  }
+}
 
 .navbar__wrapper {
   display: flex;
