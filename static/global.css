@@ -353,6 +353,16 @@ a:hover {
   max-width: 450px;
   font-size: var(--font-size-text);
 }
+@media only screen and (max-width: 600px) {
+  .blog__content {
+    padding: 25px 15px;
+  }
+  .blog__description {
+    margin: 0px;
+    font-size: var(--font-size-medium);
+  }
+
+}
 
 a.blog__link {
   text-decoration: none;
