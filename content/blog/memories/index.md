@@ -1,5 +1,5 @@
 +++
-title = "Ended Life"
+title = "Memories"
 description = "Unknown"
 date = 2019-12-27T06:00:00.000Z
 +++
@@ -12,7 +12,7 @@ This feeling of excitement when she was opening our front door, coming back from
 
 I could see myself reading Calvin & Hobbes, lay down in our cozy bed, just besides her. Suddenly I would laugh at loud, then she would smiled at me; asking me to read it too. 
 
-And those mornings of sleepy face, putting everything from the fridge’s stomach to our table; feta, avocado, toasted bread, fresh grapefruit juice for her and coffee for me.
+And those mornings of sleepy face, putting everything from the fridge’s stomach to our table; feta, avocado, toasted bread, grapefruit juice for her and coffee for me.
 
 …<br />
 …
