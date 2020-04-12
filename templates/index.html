@@ -128,7 +128,18 @@
           window.__isNightMode = !isNightMode;
       }
     </script>
-     <script> (function() { window.__bast__website_id = 1; window.__bast__user_id = 1; window.__bast__trackerUrl = "https://test123342.herokuapp.com/ghost.png"; var script = document.createElement('script'); script.src = "https://test123342.herokuapp.com/script.js"; script.async = false; document.head.appendChild(script); })(); </script>
+
+    <script>
+      (function() {
+        window.__bast__website_id = 1;
+        window.__bast__trackerUrl = "https://bast-prod.herokuapp.com/api/ghost.png";
+
+        var script = document.createElement('script');
+        script.src = "https://bast-prod.herokuapp.com/script.js";
+        script.async = false;
+        document.head.appendChild(script);
+      })();
+    </script>
   </body>
 
 </html>
