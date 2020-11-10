@@ -12,4 +12,4 @@ jobs:
         env:
           PAGES_BRANCH: master
           BUILD_DIR: .
-          TOKEN: ${{ GH_TOKEN }}
+          TOKEN: ${{ secrets.TOKEN }}  
