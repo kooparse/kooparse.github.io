@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <meta name="twitter:site" content="@kooparse">
+    <meta name="twitter:creator" content="@kooparse">
+    <meta name="twitter:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="Alex&#x27;s thinking box">
+    <meta name="og:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/favicon.png" rel="icon">
+    <link href="https:&#x2F;&#x2F;kooparse.com&#x2F;blog&#x2F;memory-arena&#x2F;" rel="canonical">
+
+    
+  <title>Memory Arena | Alex&#x27;s thinking box</title>
+  <meta name="description" content="Memory management with pre-allocation.">
+  <meta name="twitter:title" content="Memory Arena">
+  <meta name="twitter:description" content="Memory management with pre-allocation.">
+  <meta name="og:title" content="Memory Arena">
+  <meta name="og:description" content="Memory management with pre-allocation.">
+
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/global.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar__container">
+      <div class="navbar__wrapper">
+        <div class="navbar__item">
+          <a href="/" id="writing">
+            <div class="navbar__item">Writing</div>
+          </a>
+        </div>
+        <div class="navbar__item">
+          <a href="/about" id="about">
+            <div class="navbar__item">About</div>
+          </a>
+        </div>
+      </div>
+
+      <div class ="navbar__night_switcher" id="night-switcher">
+        <span id="switcher-icon" style="font-size: 22px;">
+        </span>
+      </div>
+    </div>
+
+    
+<div class="main__container">
+  <div class="post__spacer">
+    <div class="posts__header">
+      <h3 class="post__title">
+        Memory Arena
+      </h3>
+    </div>
+    <div class="post__date">
+      October 31, 2019
+    </div>
+    <div class="post__separator"></div>
+
+      <div class="post__text" />
+        <p>For my game, I decided to store almost every entity in a big chunk of memory allocated only once when the program boot. I am using this technique for three reasons. First, I want full and precise control over how memory is managed in the game, second I want better data locality in order to increase cache hits from the cpu, and finally, at runtime asking the operating system in order to allocate more memory is slow.</p>
+<p>All future entities will be stored inside an already allocated array.</p>
+<pre style="background-color:#212733;">
+<code><span style="color:#ffa759;">pub struct </span><span style="color:#73d0ff;">Arena</span><span style="color:#ccc9c2;">&lt;T</span><span style="color:#ccc9c2cc;">:</span><span style="color:#ccc9c2;"> Debug&gt; {
+    </span><span style="font-style:italic;color:#5c6773;">// All entity are stored inside this vector.
+    </span><span style="color:#ccc9c2;">data</span><span style="color:#ccc9c2cc;">: </span><span style="font-style:italic;color:#5ccfe6;">Vec</span><span style="color:#ccc9c2;">&lt;T&gt;,
+    handles</span><span style="color:#ccc9c2cc;">: </span><span style="font-style:italic;color:#5ccfe6;">Vec</span><span style="color:#ccc9c2;">&lt;MemoryHandle&gt;,
+    free_handles</span><span style="color:#ccc9c2cc;">: </span><span style="font-style:italic;color:#5ccfe6;">Vec</span><span style="color:#ccc9c2;">&lt;</span><span style="color:#ffa759;">usize</span><span style="color:#ccc9c2;">&gt;,
+    version_count</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffa759;">usize</span><span style="color:#ccc9c2;">,
+}
+
+</span><span style="font-style:italic;color:#5c6773;">// Sneaky tl;dr example:
+</span><span style="color:#ffa759;">fn </span><span style="color:#ffd580;">main</span><span style="color:#ccc9c2;">() {
+  </span><span style="font-style:italic;color:#5c6773;">// Initialize an arena of f32, with a maximum size of 10mb.
+  </span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> arena </span><span style="color:#f29e74;">= </span><span style="color:#ccc9c2;">Arena</span><span style="color:#f29e74;">::</span><span style="color:#ccc9c2;">&lt;</span><span style="color:#ffa759;">f32</span><span style="color:#ccc9c2;">&gt;</span><span style="color:#f29e74;">::</span><span style="color:#ccc9c2;">size_alloc(</span><span style="color:#ffcc66;">10</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+
+  </span><span style="font-style:italic;color:#5c6773;">// Insert new values.
+  </span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> handle_1 </span><span style="color:#f29e74;">=</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">1.5</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+  </span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> handle_2 </span><span style="color:#f29e74;">=</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">2.5</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+  </span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> handle_3 </span><span style="color:#f29e74;">=</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">3.5</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+
+  </span><span style="font-style:italic;color:#5c6773;">// Display values.
+  </span><span style="color:#f28779;">dbg!</span><span style="color:#ccc9c2;">(arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">get</span><span style="color:#ccc9c2;">(</span><span style="color:#f29e74;">&amp;</span><span style="color:#ccc9c2;">handle_1))</span><span style="color:#ccc9c2cc;">;
+  </span><span style="color:#f28779;">dbg!</span><span style="color:#ccc9c2;">(arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">get</span><span style="color:#ccc9c2;">(</span><span style="color:#f29e74;">&amp;</span><span style="color:#ccc9c2;">handle_2))</span><span style="color:#ccc9c2cc;">;
+  </span><span style="color:#f28779;">dbg!</span><span style="color:#ccc9c2;">(arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">get</span><span style="color:#ccc9c2;">(</span><span style="color:#f29e74;">&amp;</span><span style="color:#ccc9c2;">handle_3))</span><span style="color:#ccc9c2cc;">;
+
+  </span><span style="font-style:italic;color:#5c6773;">// Remove a value.
+</span><span style="color:#ccc9c2;">  arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">remove</span><span style="color:#ccc9c2;">(handle_1)</span><span style="color:#ccc9c2cc;">;
+
+  </span><span style="font-style:italic;color:#5c6773;">// Iterate over all the values.
+  // So here, you won&#39;t see the value from handle_1.
+</span><span style="color:#ccc9c2;">  arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">iter</span><span style="color:#ccc9c2;">()</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">for_each</span><span style="color:#ccc9c2;">(|</span><span style="color:#ffcc66;">value</span><span style="color:#ccc9c2;">| {
+    </span><span style="color:#f28779;">dbg!</span><span style="color:#ccc9c2;">(value)</span><span style="color:#ccc9c2cc;">;
+  </span><span style="color:#ccc9c2;">})</span><span style="color:#ccc9c2cc;">;
+</span><span style="color:#ccc9c2;">}
+</span></code></pre><br/>
+In Rust, we could specify the capacity of the vector when initializing it with the method `with_capacity`. Until the capacity isn’t reached, every push to the vector will be “free” (no allocation).
+<p>Because I want full control over the memory consumption of my game while developping it; if the amount of memory is exceeded (capacity is reached), the program crash.</p>
+<pre style="background-color:#212733;">
+<code><span style="color:#ccc9c2cc;">#</span><span style="color:#ccc9c2;">[</span><span style="color:#ffd580;">test</span><span style="color:#ccc9c2;">]
+</span><span style="color:#ccc9c2cc;">#</span><span style="color:#ccc9c2;">[</span><span style="color:#ffd580;">should_panic</span><span style="color:#ccc9c2;">]
+</span><span style="color:#ffa759;">fn </span><span style="color:#ffd580;">exceed_allocated_reserve</span><span style="color:#ccc9c2;">() {
+    </span><span style="font-style:italic;color:#5c6773;">// Allocate 10Mb.
+    </span><span style="color:#ffa759;">let mut</span><span style="color:#ccc9c2;"> arena </span><span style="color:#f29e74;">= </span><span style="color:#ccc9c2;">Arena</span><span style="color:#f29e74;">::</span><span style="color:#ccc9c2;">&lt;</span><span style="color:#ffa759;">bool</span><span style="color:#ccc9c2;">&gt;</span><span style="color:#f29e74;">::</span><span style="color:#ccc9c2;">size_alloc(</span><span style="color:#ffcc66;">10</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#ffa759;">let mut</span><span style="color:#ccc9c2;"> last_handle </span><span style="color:#f29e74;">= </span><span style="color:#ccc9c2;">MemoryHandle</span><span style="color:#f29e74;">::</span><span style="color:#ccc9c2;">default()</span><span style="color:#ccc9c2cc;">;
+    </span><span style="font-style:italic;color:#5c6773;">// Push elements of 1 byte.
+    </span><span style="color:#ffa759;">for </span><span style="color:#f29e74;">_ in </span><span style="color:#ffcc66;">0</span><span style="color:#f29e74;">..</span><span style="color:#ffcc66;">1000_0000 </span><span style="color:#ccc9c2;">{
+        last_handle </span><span style="color:#f29e74;">=</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">true</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#ccc9c2;">}
+
+    </span><span style="color:#f28779;">assert_eq!</span><span style="color:#ccc9c2;">(last_handle</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">value</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">999_9999</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+
+    </span><span style="font-style:italic;color:#5c6773;">// Panic here.
+</span><span style="color:#ccc9c2;">    arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">true</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+</span><span style="color:#ccc9c2;">}
+</span></code></pre>
+<p>I managed all stored entities with handles, and we always refer to them through their handles. Each handle store the index of his related entity it refer to. If we want to remove an entity, we only mark his handle as dirty.</p>
+<pre style="background-color:#212733;">
+<code><span style="color:#ccc9c2cc;">#</span><span style="color:#ccc9c2;">[</span><span style="color:#ffd580;">derive</span><span style="color:#ccc9c2;">(Debug</span><span style="color:#ccc9c2cc;">,</span><span style="color:#ccc9c2;"> Default</span><span style="color:#ccc9c2cc;">,</span><span style="color:#ccc9c2;"> Copy</span><span style="color:#ccc9c2cc;">,</span><span style="color:#ccc9c2;"> Clone)]
+</span><span style="color:#ffa759;">pub struct </span><span style="color:#73d0ff;">MemoryHandle </span><span style="color:#ccc9c2;">{
+  </span><span style="font-style:italic;color:#5c6773;">// The entity index
+  </span><span style="color:#ccc9c2;">value</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffa759;">usize</span><span style="color:#ccc9c2;">,
+  is_dirty</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffa759;">bool</span><span style="color:#ccc9c2;">,
+  </span><span style="font-style:italic;color:#5c6773;">// More on this later…
+  </span><span style="color:#ccc9c2;">version</span><span style="color:#ccc9c2cc;">: </span><span style="color:#ffa759;">usize</span><span style="color:#ccc9c2;">,
+}
+</span></code></pre>
+<p>So when we insert a new value in the arena, we get a memory handle ready to be used for getting the value.</p>
+<pre style="background-color:#212733;">
+<code><span style="color:#ccc9c2cc;">#</span><span style="color:#ccc9c2;">[</span><span style="color:#ffd580;">test</span><span style="color:#ccc9c2;">]
+</span><span style="color:#ffa759;">fn </span><span style="color:#ffd580;">store_new_block</span><span style="color:#ccc9c2;">() {
+    </span><span style="color:#ffa759;">let mut</span><span style="color:#ccc9c2;"> arena </span><span style="color:#f29e74;">= </span><span style="color:#ccc9c2;">Arena</span><span style="color:#f29e74;">::</span><span style="color:#ccc9c2;">&lt;</span><span style="color:#ffa759;">bool</span><span style="color:#ccc9c2;">&gt;</span><span style="color:#f29e74;">::</span><span style="color:#ccc9c2;">size_alloc(</span><span style="color:#ffcc66;">10</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> handle_0 </span><span style="color:#f29e74;">=</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">true</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> handle_1 </span><span style="color:#f29e74;">=</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">true</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+
+    </span><span style="color:#f28779;">assert_eq!</span><span style="color:#ccc9c2;">(handle_0</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">value</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">0</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#f28779;">assert_eq!</span><span style="color:#ccc9c2;">(handle_1</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">value</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">1</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#f28779;">assert_ne!</span><span style="color:#ccc9c2;">(handle_0</span><span style="color:#ccc9c2cc;">,</span><span style="color:#ccc9c2;"> handle_1)</span><span style="color:#ccc9c2cc;">;
+</span><span style="color:#ccc9c2;">}
+</span></code></pre>
+<p>Each time we want to read or mutate an entity we use the handle.</p>
+<pre style="background-color:#212733;">
+<code><span style="font-style:italic;color:#5c6773;">// My value is a pointer of the stored value.
+</span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> my_value </span><span style="color:#f29e74;">=</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">get</span><span style="color:#ccc9c2;">(</span><span style="color:#f29e74;">&amp;</span><span style="color:#ccc9c2;">handle)</span><span style="color:#ccc9c2cc;">;
+</span><span style="font-style:italic;color:#5c6773;">// And if we want to mutate the value…
+</span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> my_mut_value </span><span style="color:#f29e74;">=</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">get_mut</span><span style="color:#ccc9c2;">(</span><span style="color:#f29e74;">&amp;</span><span style="color:#ccc9c2;">handle)</span><span style="color:#ccc9c2cc;">;
+</span></code></pre>
+<p>As I said, when we remove an entity, we only mark his handle as dirty, but we also push the index of this dirty handle to an array. Like that, we could re-use our “dirty” handles and replace the “removed” data with a new one.</p>
+<p>Example of this pooling system:</p>
+<pre style="background-color:#212733;">
+<code><span style="color:#ccc9c2cc;">#</span><span style="color:#ccc9c2;">[</span><span style="color:#ffd580;">test</span><span style="color:#ccc9c2;">]
+</span><span style="color:#ffa759;">fn </span><span style="color:#ffd580;">remove_block</span><span style="color:#ccc9c2;">() {
+    </span><span style="color:#ffa759;">let mut</span><span style="color:#ccc9c2;"> arena </span><span style="color:#f29e74;">= </span><span style="color:#ccc9c2;">Arena</span><span style="color:#f29e74;">::</span><span style="color:#ccc9c2;">&lt;</span><span style="color:#ffa759;">bool</span><span style="color:#ccc9c2;">&gt;</span><span style="color:#f29e74;">::</span><span style="color:#ccc9c2;">size_alloc(</span><span style="color:#ffcc66;">10</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> handle_0 </span><span style="color:#f29e74;">=</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">true</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> handle_1 </span><span style="color:#f29e74;">=</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">true</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+
+    </span><span style="color:#f28779;">assert_eq!</span><span style="color:#ccc9c2;">(handle_0</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">version</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">1</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#f28779;">assert_eq!</span><span style="color:#ccc9c2;">(handle_1</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">version</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">2</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+</span><span style="color:#ccc9c2;">    arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">remove</span><span style="color:#ccc9c2;">(handle_0)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#f28779;">assert_eq!</span><span style="color:#ccc9c2;">(arena</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">handles[</span><span style="color:#ffcc66;">0</span><span style="color:#ccc9c2;">]</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">is_dirty</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">true</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+
+    </span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> handle_2 </span><span style="color:#f29e74;">=</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">false</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#f28779;">assert_eq!</span><span style="color:#ccc9c2;">(handle_2</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">version</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">3</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+
+    </span><span style="color:#f28779;">assert_eq!</span><span style="color:#ccc9c2;">(arena</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">data[</span><span style="color:#ffcc66;">0</span><span style="color:#ccc9c2;">]</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">false</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+</span><span style="color:#ccc9c2;">}
+</span></code></pre>
+<p>Here's an illustration about how entities/handles are related to each others. Data vector is referred by Handles, red ones are dirty (free) and finally indexes of dirty handles are stored in an array.
+<img src="./arena.jpg" alt="Arena drawing" /></p>
+<p>I am versioning every newly generated handle, and increment the version counter every time. So we can’t mess up handles. Comparing an old handle (freed since) and a new one, while both are referring to the same entity index; we won’t have any problems because the “version” isn’t the same.</p>
+<pre style="background-color:#212733;">
+<code><span style="color:#ffa759;">impl </span><span style="color:#ccc9c2;">PartialEq </span><span style="color:#ffa759;">for </span><span style="color:#73d0ff;">MemoryHandle </span><span style="color:#ccc9c2;">{
+    </span><span style="color:#ffa759;">fn </span><span style="color:#ffd580;">eq</span><span style="color:#ccc9c2;">(</span><span style="color:#f29e74;">&amp;</span><span style="color:#ffcc66;">self</span><span style="color:#ccc9c2;">, </span><span style="color:#ffcc66;">other</span><span style="color:#ccc9c2cc;">: </span><span style="color:#f29e74;">&amp;</span><span style="color:#ffa759;">Self</span><span style="color:#ccc9c2;">) </span><span style="color:#ccc9c2cc;">-&gt; </span><span style="color:#ffa759;">bool </span><span style="color:#ccc9c2;">{
+        </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">value </span><span style="color:#f29e74;">==</span><span style="color:#ccc9c2;"> other</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">value </span><span style="color:#f29e74;">&amp;&amp; </span><span style="font-style:italic;color:#5ccfe6;">self</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">version </span><span style="color:#f29e74;">==</span><span style="color:#ccc9c2;"> other</span><span style="color:#f29e74;">.</span><span style="color:#ccc9c2;">version
+    }
+}
+
+</span></code></pre>
+<p>Also, I have a flush method, to mark all current handles as dirty, and push them into the re-use pool. It’s perfect when we want to load a new scene :)</p>
+<pre style="background-color:#212733;">
+<code><span style="color:#ccc9c2cc;">#</span><span style="color:#ccc9c2;">[</span><span style="color:#ffd580;">test</span><span style="color:#ccc9c2;">]
+</span><span style="color:#ffa759;">fn </span><span style="color:#ffd580;">flush</span><span style="color:#ccc9c2;">() {
+    </span><span style="color:#ffa759;">let mut</span><span style="color:#ccc9c2;"> arena </span><span style="color:#f29e74;">= </span><span style="color:#ccc9c2;">Arena</span><span style="color:#f29e74;">::</span><span style="color:#ccc9c2;">&lt;</span><span style="color:#ffa759;">bool</span><span style="color:#ccc9c2;">&gt;</span><span style="color:#f29e74;">::</span><span style="color:#ccc9c2;">size_alloc(</span><span style="color:#ffcc66;">10</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> handle_0 </span><span style="color:#f29e74;">=</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">true</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#ffa759;">let </span><span style="color:#f29e74;">_ =</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">true</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#ffa759;">let </span><span style="color:#f29e74;">_ =</span><span style="color:#ccc9c2;"> arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">insert</span><span style="color:#ccc9c2;">(</span><span style="color:#ffcc66;">true</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+
+    </span><span style="color:#f28779;">assert_eq!</span><span style="color:#ccc9c2;">(</span><span style="color:#f29e74;">*</span><span style="color:#ccc9c2;">arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">get</span><span style="color:#ccc9c2;">(</span><span style="color:#f29e74;">&amp;</span><span style="color:#ccc9c2;">handle_0)</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">true</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+
+</span><span style="color:#ccc9c2;">    arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">flush</span><span style="color:#ccc9c2;">()</span><span style="color:#ccc9c2cc;">;
+
+    </span><span style="color:#ffa759;">let</span><span style="color:#ccc9c2;"> should_panic </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">catch_unwind</span><span style="color:#ccc9c2;">(|| arena</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">get</span><span style="color:#ccc9c2;">(</span><span style="color:#f29e74;">&amp;</span><span style="color:#ccc9c2;">handle_0))</span><span style="color:#ccc9c2cc;">;
+    </span><span style="color:#f28779;">assert_eq!</span><span style="color:#ccc9c2;">(should_panic</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">is_err</span><span style="color:#ccc9c2;">()</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ffcc66;">true</span><span style="color:#ccc9c2;">)</span><span style="color:#ccc9c2cc;">;
+</span><span style="color:#ccc9c2;">}
+</span></code></pre>
+<p>That’s all for now! :)</p>
+
+      </div>
+      <hr class="post__end_liner" />
+
+      <ul class="post__footer">
+        <li class="post__footer_block post__prev_block">
+          
+            <a
+              class="blog__link"
+              href="https:&#x2F;&#x2F;kooparse.com&#x2F;blog&#x2F;about-text-rendering&#x2F;"
+              >
+              ← About Text Rendering
+            </a>
+          
+        </li>
+
+        <li class="post__footer_block post__next_block">
+          
+            <a
+              class="blog__link"
+              href="https:&#x2F;&#x2F;kooparse.com&#x2F;blog&#x2F;the-spider-trap&#x2F;"
+              >
+              The Spider Trap →
+            </a>
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+    <script>
+      window.__is_about = /about\/$/.test(window.location.href);
+      window.__isNightMode = !!window.localStorage.getItem('isNightMode');
+
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.add(window.__isNightMode ? 'dark' : 'light');
+
+      const writing_nav = document.getElementById('writing');
+      const about_nav = document.getElementById('about');
+      const switcher_icon = document.getElementById('switcher-icon');
+
+      if (window.__is_about) {
+            writing_nav.classList.remove('active_tab');
+            about_nav.classList.add('active_tab');
+      } else {
+          writing_nav.classList.add('active_tab');
+          about_nav.classList.remove('active_tab');
+      }
+
+      document.getElementById("night-switcher")
+        .addEventListener("click", () => window.__setTheme());
+
+      switcher_icon.classList.add(window.__isNightMode 
+        ? 'icon-moon-solid' 
+        : 'icon-moon-regular'
+      );
+
+      window.__setTheme = function() {
+          const isNightMode = window.localStorage.getItem('isNightMode')
+
+          if (isNightMode) {
+            window.localStorage.removeItem('isNightMode')
+            body.classList.remove('dark');
+            body.classList.add('light');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-regular')
+          } else {
+            window.localStorage.setItem('isNightMode', 'true')
+            body.classList.remove('light');
+            body.classList.add('dark');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-solid')
+          }
+
+          window.__isNightMode = !isNightMode;
+      }
+    </script>
+
+    <script>
+      (function() {
+        window.__bast__website_id = 1;
+        window.__bast__trackerUrl = "https://bast-prod.herokuapp.com/ghost.png";
+
+        var script = document.createElement('script');
+        script.src = "https://bast-prod.herokuapp.com/script.js";
+        script.async = false;
+        document.head.appendChild(script);
+      })();
+    </script>
+  </body>
+
+</html>
