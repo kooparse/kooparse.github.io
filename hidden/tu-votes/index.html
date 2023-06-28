@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <meta name="twitter:site" content="@kooparse">
+    <meta name="twitter:creator" content="@kooparse">
+    <meta name="twitter:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="Alex&#x27;s thinking box">
+    <meta name="og:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/favicon.png" rel="icon">
+    <link href="https:&#x2F;&#x2F;kooparse.com&#x2F;hidden&#x2F;tu-votes&#x2F;" rel="canonical">
+
+    
+  <title>Tu votes | Alex&#x27;s thinking box</title>
+  <meta name="description" content="">
+  <meta name="twitter:title" content="Tu votes">
+  <meta name="twitter:description" content="">
+  <meta name="og:title" content="Tu votes">
+  <meta name="og:description" content="">
+
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/global.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar__container">
+      <div class="navbar__wrapper">
+        <div class="navbar__item">
+          <a href="/" id="writing">
+            <div class="navbar__item">Writing</div>
+          </a>
+        </div>
+        <div class="navbar__item">
+          <a href="/about" id="about">
+            <div class="navbar__item">About</div>
+          </a>
+        </div>
+      </div>
+
+      <div class ="navbar__night_switcher" id="night-switcher">
+        <span id="switcher-icon" style="font-size: 22px;">
+        </span>
+      </div>
+    </div>
+
+    
+<div class="main__container">
+  <div class="post__spacer">
+    <div class="posts__header">
+      <h3 class="post__title">
+        Tu votes
+      </h3>
+    </div>
+    <div class="post__date">
+      January 30, 2016
+    </div>
+    <div class="post__separator"></div>
+
+      <div class="post__text" />
+        <p>Tu décides, tu votes.</p>
+<p>Quand tu descends tes poubelles et que tu dois choisir entre la jaune et la verte, tu votes.</p>
+<p>Quand tu décides de mettre ton budget dans de la nourriture de qualité et saine pour toi plutôt que de la bouffe industrielle qui finira par te tuer, tu votes.</p>
+<p>Quand tu donnes des euros à un sans-abri en sortant du shop les bras remplis d’paquets, tu votes.</p>
+<p>Quand tu décides de te battre pour défendre quelqu’un qui se fait insulter sans raison dans le métro, tu votes.</p>
+<p>Quand tu prends le risque de frauder la SNCF, car tu n’as pas les moyens et que c’est juste trop cher, tu votes.</p>
+<p>Quand tu passes ta soirée seul chez toi à avancer sur tes plans plutôt que de te mettre une mine avec tes potes pour t’oublier, tu votes.</p>
+<p>Quand tu décides de ne pas voter lors des élections qui ont lieu une fois tous les cinq ans, car ces putes veulent que trop rarement ton avis, tu votes.</p>
+
+      </div>
+      <hr class="post__end_liner" />
+
+      <ul class="post__footer">
+        <li class="post__footer_block post__prev_block">
+          
+        </li>
+
+        <li class="post__footer_block post__next_block">
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+    <script>
+      window.__is_about = /about\/$/.test(window.location.href);
+      window.__isNightMode = !!window.localStorage.getItem('isNightMode');
+
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.add(window.__isNightMode ? 'dark' : 'light');
+
+      const writing_nav = document.getElementById('writing');
+      const about_nav = document.getElementById('about');
+      const switcher_icon = document.getElementById('switcher-icon');
+
+      if (window.__is_about) {
+            writing_nav.classList.remove('active_tab');
+            about_nav.classList.add('active_tab');
+      } else {
+          writing_nav.classList.add('active_tab');
+          about_nav.classList.remove('active_tab');
+      }
+
+      document.getElementById("night-switcher")
+        .addEventListener("click", () => window.__setTheme());
+
+      switcher_icon.classList.add(window.__isNightMode 
+        ? 'icon-moon-solid' 
+        : 'icon-moon-regular'
+      );
+
+      window.__setTheme = function() {
+          const isNightMode = window.localStorage.getItem('isNightMode')
+
+          if (isNightMode) {
+            window.localStorage.removeItem('isNightMode')
+            body.classList.remove('dark');
+            body.classList.add('light');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-regular')
+          } else {
+            window.localStorage.setItem('isNightMode', 'true')
+            body.classList.remove('light');
+            body.classList.add('dark');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-solid')
+          }
+
+          window.__isNightMode = !isNightMode;
+      }
+    </script>
+
+    <script data-goatcounter="https://kooparse.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </body>
+
+</html>

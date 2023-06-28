@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <meta name="twitter:site" content="@kooparse">
+    <meta name="twitter:creator" content="@kooparse">
+    <meta name="twitter:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="Alex&#x27;s thinking box">
+    <meta name="og:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/favicon.png" rel="icon">
+    <link href="https:&#x2F;&#x2F;kooparse.com&#x2F;blog&#x2F;the-spider-trap&#x2F;" rel="canonical">
+
+    
+  <title>The Spider Trap | Alex&#x27;s thinking box</title>
+  <meta name="description" content="Reflecting the web stack.">
+  <meta name="twitter:title" content="The Spider Trap">
+  <meta name="twitter:description" content="Reflecting the web stack.">
+  <meta name="og:title" content="The Spider Trap">
+  <meta name="og:description" content="Reflecting the web stack.">
+
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/global.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar__container">
+      <div class="navbar__wrapper">
+        <div class="navbar__item">
+          <a href="/" id="writing">
+            <div class="navbar__item">Writing</div>
+          </a>
+        </div>
+        <div class="navbar__item">
+          <a href="/about" id="about">
+            <div class="navbar__item">About</div>
+          </a>
+        </div>
+      </div>
+
+      <div class ="navbar__night_switcher" id="night-switcher">
+        <span id="switcher-icon" style="font-size: 22px;">
+        </span>
+      </div>
+    </div>
+
+    
+<div class="main__container">
+  <div class="post__spacer">
+    <div class="posts__header">
+      <h3 class="post__title">
+        The Spider Trap
+      </h3>
+    </div>
+    <div class="post__date">
+      November 06, 2019
+    </div>
+    <div class="post__separator"></div>
+
+      <div class="post__text" />
+        <p><em>(This post is not a declaration of war)</em></p>
+<p>I keep reflecting on my past few years (seven) working for web startups. Asking myself what problems my brain tried to solves while making web-apps and servers for businesses, but the answer is almost none. In fact, I was mostly using libraries and frameworks to get the job done.</p>
+<p>But you know what? I don’t like having to learn and use libraries in order to complete a specific work. Nether architecting my entire codebase around frameworks that tells me to split my code in an infinite number of files of 10 lines. <em>“Don’t reinvent the wheel”</em> they said, but we keep learning again and again how to use this fucking wheel. We should make our programs from persistent knowledge, not short time best-practices.</p>
+<p>Despite billions of people using websites every day, web clients aren’t designed for today’s usage. To me, it’s a weird paradox; we’re developing programs that target only one “platform” (the browser) so it should be straightforward but instead, we're consuming a tremendous amount of tools and frameworks created for only one goal: hacking the browser API.</p>
+<p>Try making rich and complex web-app without any third-party packages and you’re going right in hell. The <em>dom api</em> is a complete mess, and we’re trying to hide it with an infinite pile of libraries. And jeez I didn’t talk about deploying web-apps…</p>
+<p>Ladies and gentlemen, I am ashamed.
+<br>
+<br>
+...
+<br></p>
+<p>Sometimes, in the late evening, watching the stars; I’m caught dreaming about ourselves re-designing the browser and the web's development process with it. With new paradigms, perspectives and ambitions.</p>
+<p>Because in the end, it’s just data with instructions sent to another cpu.</p>
+<p><img src="https://kooparse.com/blog/the-spider-trap/./stars.jpg" alt="Wathing the stars" /></p>
+
+      </div>
+      <hr class="post__end_liner" />
+
+      <ul class="post__footer">
+        <li class="post__footer_block post__prev_block">
+          
+        </li>
+
+        <li class="post__footer_block post__next_block">
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+    <script>
+      window.__is_about = /about\/$/.test(window.location.href);
+      window.__isNightMode = !!window.localStorage.getItem('isNightMode');
+
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.add(window.__isNightMode ? 'dark' : 'light');
+
+      const writing_nav = document.getElementById('writing');
+      const about_nav = document.getElementById('about');
+      const switcher_icon = document.getElementById('switcher-icon');
+
+      if (window.__is_about) {
+            writing_nav.classList.remove('active_tab');
+            about_nav.classList.add('active_tab');
+      } else {
+          writing_nav.classList.add('active_tab');
+          about_nav.classList.remove('active_tab');
+      }
+
+      document.getElementById("night-switcher")
+        .addEventListener("click", () => window.__setTheme());
+
+      switcher_icon.classList.add(window.__isNightMode 
+        ? 'icon-moon-solid' 
+        : 'icon-moon-regular'
+      );
+
+      window.__setTheme = function() {
+          const isNightMode = window.localStorage.getItem('isNightMode')
+
+          if (isNightMode) {
+            window.localStorage.removeItem('isNightMode')
+            body.classList.remove('dark');
+            body.classList.add('light');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-regular')
+          } else {
+            window.localStorage.setItem('isNightMode', 'true')
+            body.classList.remove('light');
+            body.classList.add('dark');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-solid')
+          }
+
+          window.__isNightMode = !isNightMode;
+      }
+    </script>
+
+    <script data-goatcounter="https://kooparse.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </body>
+
+</html>

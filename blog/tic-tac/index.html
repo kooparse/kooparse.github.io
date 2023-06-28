@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <meta name="twitter:site" content="@kooparse">
+    <meta name="twitter:creator" content="@kooparse">
+    <meta name="twitter:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="Alex&#x27;s thinking box">
+    <meta name="og:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/favicon.png" rel="icon">
+    <link href="https:&#x2F;&#x2F;kooparse.com&#x2F;blog&#x2F;tic-tac&#x2F;" rel="canonical">
+
+    
+  <title>Tic-Tac | Alex&#x27;s thinking box</title>
+  <meta name="description" content="Unknown">
+  <meta name="twitter:title" content="Tic-Tac">
+  <meta name="twitter:description" content="Unknown">
+  <meta name="og:title" content="Tic-Tac">
+  <meta name="og:description" content="Unknown">
+
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/global.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar__container">
+      <div class="navbar__wrapper">
+        <div class="navbar__item">
+          <a href="/" id="writing">
+            <div class="navbar__item">Writing</div>
+          </a>
+        </div>
+        <div class="navbar__item">
+          <a href="/about" id="about">
+            <div class="navbar__item">About</div>
+          </a>
+        </div>
+      </div>
+
+      <div class ="navbar__night_switcher" id="night-switcher">
+        <span id="switcher-icon" style="font-size: 22px;">
+        </span>
+      </div>
+    </div>
+
+    
+<div class="main__container">
+  <div class="post__spacer">
+    <div class="posts__header">
+      <h3 class="post__title">
+        Tic-Tac
+      </h3>
+    </div>
+    <div class="post__date">
+      March 22, 2023
+    </div>
+    <div class="post__separator"></div>
+
+      <div class="post__text" />
+        <p>Café chaud et ça baille, paresse dès 9h du mat', les volets fermés, l'écran ouvert, ça défile des pages, clique sur des coeurs. La télé qui braille de l'autre côté de la pièce, les intervenants débitent, m'épatent, se débattent sur des sujets qui défient la logique du monde genre « faire du vélo est-ce de droite ou de gauche ? ». La morale qui plane sur les choix du quotidien, des mégots sur la table basse et la vie qui file au rythme des weekends.</p>
+<p>Des idées qui vacillent à bâbord puis à tribord, la colère d'un soir, les pauvres sont pauvres, les riches sont riches, le linge tourne et tourne et tourne dans les tambours des laveries de fin d'après-midi, espoir d'y voir plus clair, la classe moyenne s'indigne, des trains qui passent, des avions qui décollent, et rien qui ne change vraiment. Chacun veut croire à la justesse de sa cause, alors ça tangue à droite puis à gauche jusqu'à en avoir la gerbe, et cette question qui obsède ; à quand la politique, la véritable, celle du coeur à gauche, et du cerveau adroit ?</p>
+<p>Des acrobates, une baleine échouée sur la plage, un chat qui prend son bain, des cris, un crocodile qui gobe un tigre, une fille qui twerk dans une chambre ; le corps ankylosé sur une chaise de bureau, l'esprit arrosé d'images, de vidéos et d'shorts en continu, comme ces valises que l'on regarde défiler sur le carrousel à bagages de l'aéroport Charle-de-Gaulle. La réalité est une expérience du temps « Tik Tok Tik Tok Tik Tok » et l'avenir vomit ces créateurs de contenu qui en dehors de toute considération artistique plongent la pensée dans un état léthargique de lassitude et de sommation, où l'on se regarde avec un sourire aux lèvres devenir chaque jour un peu plus docile, mais qu'est-il advenu aux véritables auteurs de l'époque ?</p>
+<p>Loin des notifications à répétition, les chats sillonnent les toitures parisiennes, les toxicomanes déambulent dans les rues désertes, le reflet des sirènes de police vient éclaircir les murs des habitations d'un rouge vif et d'un bleu azur. Une cigarette se consume avec douceur contre les lèvres d'une femme qui regarde la ville s'éteindre peu à peu. Cette ville où dansent ces couples qui parlent et s'écoutent en anglais, chacun avec son accent et sa couleur. C'est peut-être ça le mélange de mélanine, la beauté du cosmopolite et la société qui fonctionne encore un peu.</p>
+
+      </div>
+      <hr class="post__end_liner" />
+
+      <ul class="post__footer">
+        <li class="post__footer_block post__prev_block">
+          
+        </li>
+
+        <li class="post__footer_block post__next_block">
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+    <script>
+      window.__is_about = /about\/$/.test(window.location.href);
+      window.__isNightMode = !!window.localStorage.getItem('isNightMode');
+
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.add(window.__isNightMode ? 'dark' : 'light');
+
+      const writing_nav = document.getElementById('writing');
+      const about_nav = document.getElementById('about');
+      const switcher_icon = document.getElementById('switcher-icon');
+
+      if (window.__is_about) {
+            writing_nav.classList.remove('active_tab');
+            about_nav.classList.add('active_tab');
+      } else {
+          writing_nav.classList.add('active_tab');
+          about_nav.classList.remove('active_tab');
+      }
+
+      document.getElementById("night-switcher")
+        .addEventListener("click", () => window.__setTheme());
+
+      switcher_icon.classList.add(window.__isNightMode 
+        ? 'icon-moon-solid' 
+        : 'icon-moon-regular'
+      );
+
+      window.__setTheme = function() {
+          const isNightMode = window.localStorage.getItem('isNightMode')
+
+          if (isNightMode) {
+            window.localStorage.removeItem('isNightMode')
+            body.classList.remove('dark');
+            body.classList.add('light');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-regular')
+          } else {
+            window.localStorage.setItem('isNightMode', 'true')
+            body.classList.remove('light');
+            body.classList.add('dark');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-solid')
+          }
+
+          window.__isNightMode = !isNightMode;
+      }
+    </script>
+
+    <script data-goatcounter="https://kooparse.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Alex&#x27;s thinking box</title>
+    <subtitle>Alex thoughts</subtitle>
+    <link href="https://kooparse.com/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://kooparse.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-03-22T00:00:00+00:00</updated>
+    <id>https://kooparse.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Tic-Tac</title>
+        <published>2023-03-22T00:00:00+00:00</published>
+        <updated>2023-03-22T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/tic-tac/" type="text/html"/>
+        <id>https://kooparse.com/blog/tic-tac/</id>
+        
+        <content type="html">&lt;p&gt;Café chaud et ça baille, paresse dès 9h du mat&#x27;, les volets fermés, l&#x27;écran ouvert, ça défile des pages, clique sur des coeurs. La télé qui braille de l&#x27;autre côté de la pièce, les intervenants débitent, m&#x27;épatent, se débattent sur des sujets qui défient la logique du monde genre « faire du vélo est-ce de droite ou de gauche ? ». La morale qui plane sur les choix du quotidien, des mégots sur la table basse et la vie qui file au rythme des weekends.&lt;&#x2F;p&gt;
+&lt;p&gt;Des idées qui vacillent à bâbord puis à tribord, la colère d&#x27;un soir, les pauvres sont pauvres, les riches sont riches, le linge tourne et tourne et tourne dans les tambours des laveries de fin d&#x27;après-midi, espoir d&#x27;y voir plus clair, la classe moyenne s&#x27;indigne, des trains qui passent, des avions qui décollent, et rien qui ne change vraiment. Chacun veut croire à la justesse de sa cause, alors ça tangue à droite puis à gauche jusqu&#x27;à en avoir la gerbe, et cette question qui obsède ; à quand la politique, la véritable, celle du coeur à gauche, et du cerveau adroit ?&lt;&#x2F;p&gt;
+&lt;p&gt;Des acrobates, une baleine échouée sur la plage, un chat qui prend son bain, des cris, un crocodile qui gobe un tigre, une fille qui twerk dans une chambre ; le corps ankylosé sur une chaise de bureau, l&#x27;esprit arrosé d&#x27;images, de vidéos et d&#x27;shorts en continu, comme ces valises que l&#x27;on regarde défiler sur le carrousel à bagages de l&#x27;aéroport Charle-de-Gaulle. La réalité est une expérience du temps « Tik Tok Tik Tok Tik Tok » et l&#x27;avenir vomit ces créateurs de contenu qui en dehors de toute considération artistique plongent la pensée dans un état léthargique de lassitude et de sommation, où l&#x27;on se regarde avec un sourire aux lèvres devenir chaque jour un peu plus docile, mais qu&#x27;est-il advenu aux véritables auteurs de l&#x27;époque ?&lt;&#x2F;p&gt;
+&lt;p&gt;Loin des notifications à répétition, les chats sillonnent les toitures parisiennes, les toxicomanes déambulent dans les rues désertes, le reflet des sirènes de police vient éclaircir les murs des habitations d&#x27;un rouge vif et d&#x27;un bleu azur. Une cigarette se consume avec douceur contre les lèvres d&#x27;une femme qui regarde la ville s&#x27;éteindre peu à peu. Cette ville où dansent ces couples qui parlent et s&#x27;écoutent en anglais, chacun avec son accent et sa couleur. C&#x27;est peut-être ça le mélange de mélanine, la beauté du cosmopolite et la société qui fonctionne encore un peu.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Petit</title>
+        <published>2022-10-29T08:00:00+00:00</published>
+        <updated>2022-10-29T08:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/petit/" type="text/html"/>
+        <id>https://kooparse.com/blog/petit/</id>
+        
+        <content type="html">&lt;p&gt;La cassette se rembobine, des films de dinosaures et de créatures en tout genre, la nouvelle Game Boy, un goûter après l&#x27;école, des après-midi à vélo, une vie rythmée par les vacances d&#x27;été et l&#x27;odeur des bougies d&#x27;anniversaire qui repoussaient l&#x27;heure du sommeil. La nostalgie fait parfois du bien, à jouer à la console assis sur le carrelage du salon, ces gosses d&#x27;internet que nous étions et ces années d&#x27;avance que l&#x27;on avait. Ce nouveau continent de câbles et d&#x27;optiques, aux pixels infinies qu&#x27;il nous fallait conquérir avant les adultes et les gens cools, ce royaume à nous avec nos rêves et nos règles. Tant de naiveté qui nous rendait capable d&#x27;imaginer tout les possibles ; de la fiction à la science, depuis petit, de mystère en mystère, c&#x27;était le monde que l&#x27;on inventait, et qui s&#x27;inventait devant nous.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Kaboom</title>
+        <published>2022-10-29T06:00:00+00:00</published>
+        <updated>2022-10-29T06:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/kaboom/" type="text/html"/>
+        <id>https://kooparse.com/blog/kaboom/</id>
+        
+        <content type="html">&lt;p&gt;Tout déconstruire ; toi, moi, les hommes et les femmes, le sexe, les mots et la langue, jusqu&#x27;à gangrène et addiction. On décortique le homard, on dépèce le lapin, on dévisse la tête des rois, on désosses ceux qui en ont déjà fini avec la vie, on désassemble l&#x27;organique et la matière. Diviser les coeurs et les peuples, les fortunés et les pauvres, l&#x27;eau et le feu. Pulsion inaltérable puis dans un dernier élan de grâce, on divise l&#x27;atome de lui-même.&lt;&#x2F;p&gt;
+&lt;p&gt;Kaboom.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Haut les coeurs</title>
+        <published>2022-10-20T00:00:00+00:00</published>
+        <updated>2022-10-20T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/haut-les-coeurs/" type="text/html"/>
+        <id>https://kooparse.com/blog/haut-les-coeurs/</id>
+        
+        <content type="html">&lt;p&gt;Un ciel blanc comme l&#x27;écran du Mac qui s’allume, et la cacophonie du monde moderne démarre sous des yeux fatigués. Ils défilent tous sur les plateaux télévisés à raconter d&#x27;un air courtois les petits gestes à faire pour sauver la planète, du sèche-linge à l&#x27;étendoir et des cravates aux cols roulés ; mais à quoi bon parler de sobriété quand le monde, lui, est déjà complètement saoul ? Un dosage jamais parfait, ajuste, modifie, égalise, oriente les curseurs des taxes, retraites, salaires, prix du carburant ; un pays se pilote comme un boing 747 à la seule différence qu&#x27;ici, tout le monde est dans la soute. Puis face à l&#x27;ennui il faut des ennemis, on s&#x27;oppose à tout, à tous, à tes souhaits. Ça piaille dans tout les sens, dans la rue, sur les écrans, et visiblement dans la chambre de la voisine aussi. Voyez-vous, la planète tourne tellement vite que j&#x27;en ai la gerbe.&lt;&#x2F;p&gt;
+&lt;p&gt;Haut les coeurs.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Freestyle du jeudi soir</title>
+        <published>2022-10-13T00:00:00+00:00</published>
+        <updated>2022-10-13T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/freestyle-du-jeudi-soir/" type="text/html"/>
+        <id>https://kooparse.com/blog/freestyle-du-jeudi-soir/</id>
+        
+        <content type="html">&lt;p&gt;Les images défilent sur le mur du salon et j&#x27;regarde mon pote qui défonce des mutants sur la Play. Pizza et séries comme à 20 ans, comme si j&#x27;avais rien à perdre, comme si j&#x27;avais peur de rien, juste du temps qui passe, des plantes qui grandissent et la poussière qui s&#x27;installe. Des gamins sur Youtube qui gagnent comme les patrons des parents, qu&#x27;est-ce que tu veux faire plus tard ? Des memes, pour que les gens m&#x27;aiment, &#x27;va trouver du sens après ça. Loin de ma France qui fait parler d&#x27;elle, mais je suis quand même, les oreilles braquées vers elle, la grève ; un pour tous des syndicats et tous pour un du patronat. « Yo Alex, tu veux une bière !? » Qu&#x27;il me lance mon pote.&lt;&#x2F;p&gt;
+&lt;p&gt;À la tienne.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Paris, je te quitte</title>
+        <published>2022-09-02T00:00:00+00:00</published>
+        <updated>2022-09-02T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/paris-je-te-quitte/" type="text/html"/>
+        <id>https://kooparse.com/blog/paris-je-te-quitte/</id>
+        
+        <content type="html">&lt;p&gt;Code de séquençage, procédure de compilation, souffle retenu, la tête plongée dans la matrice ; ouais ça manque. Il faut une pause, observer les idées, le progrès, l&#x27;état du monde, pour ensuite se jeter avec fougue dans la bagarre.&lt;&#x2F;p&gt;
+&lt;p&gt;Un crépuscule qui pose sagement son voile sur la ville des lumières. Des gyrophares et des sirènes, des Klaxons, des clients qui montent et qui descendent des taxis, une tour qui scintille, la musique qui s&#x27;échappe des bars, une jolie fille en robe d&#x27;été, un vélib qui se faufile le long du canal, un lampadaire éteint, rebelles contre gendarmes en furie. La cité qui ne ressemble en rien de près ou de loin à un programme qu&#x27;un architecte ce serait amusé à construire de manière méthodique. Paris pluvieux, nerveux, fourbe, flou, fou.&lt;&#x2F;p&gt;
+&lt;p&gt;Paris, je te quitte.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Dernier souvenir</title>
+        <published>2022-01-29T00:00:00+00:00</published>
+        <updated>2022-01-29T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/hidden/dernier-souvenir/" type="text/html"/>
+        <id>https://kooparse.com/hidden/dernier-souvenir/</id>
+        
+        <content type="html">&lt;p&gt;Un baiser, un sourire complice, un regard amoureux, qui à tout méprendre, sera le dernier. Je l’observe s’en aller, des secondes et une dernière image ; le vent l’emporte et tout disparaît.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Fomenko</title>
+        <published>2020-12-09T00:00:00+00:00</published>
+        <updated>2020-12-09T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/fomenko/" type="text/html"/>
+        <id>https://kooparse.com/blog/fomenko/</id>
+        
+        <content type="html">&lt;p&gt;Mon Pilea qui boit gentiment son eau sur le rebord de la table basse. La bataille contre la poussière qui fait rage dans l&#x27;appartement. Toujours ces enceintes allumées et le vinyle qui tourne, un journal à moitié lu, plié, qui finira comme paquet cadeau. Le dernier Usbek &amp;amp; Ricka, un demi Socialter et quelques livres éparpillés ici et là. Une guitare triste au coin de la pièce, comme oubliée . Le skate rose posé sagement sur le plancher. Il fait que trop beau aujourd&#x27;hui, et bizarement je pense à Anatoly Fomenko, ce célèbre mathématicien russe, devenu fou après s’être aventuré un peu trop loin dans les abysses infinis de la géométrie mathématique. Il nous témoignait de ses expéditions à travers des dessins vertigineux et des peintures titanesques. La vision des coulisses du réel où nous ne sommes pas invités, l’autre côté des murs, le chaos du monde ; un lieu mental où aucune construction est interdite, aucune limite physique ne s&#x27;impose. Des dimensions qui défient toute résonance architecturale, là-bas y figurent des temples vertigineux à la gloire du hasard mathématique surplombant l&#x27;ombre infime des hommes baignés dans une piscine de dés qui s&#x27;étend à perte de vue. On ne dompte pas l&#x27;infini, face à ces grands espaces, nous ne sommes plus rien.&lt;&#x2F;p&gt;
+&lt;p&gt;Fomenko devenu fou, ravagé par ses visions, publia des théories sordides sur l&#x27;Histoire qui fît de l&#x27;ombre à son talent indéniable mais méconnu d&#x27;artiste.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;kooparse.com&#x2F;blog&#x2F;fomenko&#x2F;.&#x2F;random.jpg&quot; alt=&quot;Random&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Vents Contraires</title>
+        <published>2020-09-16T00:00:00+00:00</published>
+        <updated>2020-09-16T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/vents-contraires/" type="text/html"/>
+        <id>https://kooparse.com/blog/vents-contraires/</id>
+        
+        <content type="html">&lt;p&gt;Du Baden qui tourne dans l&#x27;appartement, et je pense à mon chemin parsemé d&#x27;incertitudes. Parfois, l&#x27;ignorance a du bon pour avancer ; elle nous épargne du tracas des angoisses et du premier pas que l&#x27;on ne fera pas. Quand tout parait simple, tout semble possible. Plus on sait et moins on fait.&lt;&#x2F;p&gt;
+&lt;p&gt;S&#x27;affranchir des affiches de propagande qui ne jure que d&#x27;une vie complexe plongée dans l&#x27;opulence. Je sais qu&#x27;au fond, je ne souhaite que de bons souvenirs, de quelques éclats de rire, un peu de vin, une maison à jardin sous un ciel de crépuscule, des cris d&#x27;enfants qui courent autour d&#x27;un barbecue entre amis puis une famille toujours présente.&lt;&#x2F;p&gt;
+&lt;p&gt;Mais je ne sais que penser face à mes démons qui ne cessent et s&#x27;entêtent à chercher encore l&#x27;illusion d&#x27;un graal pour pouvoir enfin souffler. Il n&#x27;est plus question de chercher le bout du monde pour poser son nid quand la richesse des siens vaut celle du monde. &lt;&#x2F;p&gt;
+&lt;p&gt;Arrêtons d&#x27;attendre le début du film.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Bain d&#x27;acide</title>
+        <published>2020-09-13T00:00:00+00:00</published>
+        <updated>2020-09-13T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/acide/" type="text/html"/>
+        <id>https://kooparse.com/blog/acide/</id>
+        
+        <content type="html">&lt;p&gt;Le vinyle qui tourne et la perspective changée ; mon bras devenait une montagne, mon corps les collines d&#x27;une province du sud, le frigo un volcan lointain, mon esprit qui sillonnait les notes du fracas musicale scandé à travers les murs qui ondulaient en rythme. Des fourmis dans les bras et les jambes. La pensée qui se dissolvait à toute allure dans cette pièce qui semblait coulée dans un univers où la physique ne faisait plus bien sens. Le paradoxe du miroir avec ce reflet qui clignait des yeux, en face un moi-même étrange où je distinguais et comprenait sa masse, son poids et sa taille dans une réalité déformée. Mon pote qui me dit &amp;quot;Alex, tout est fou !&amp;quot; et moi qui rigole allongé sur ce canapé à observer les formes ignobles que mon cerveau osait me montrer.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Aéroport</title>
+        <published>2020-08-31T00:00:00+00:00</published>
+        <updated>2020-08-31T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/aeroport/" type="text/html"/>
+        <id>https://kooparse.com/blog/aeroport/</id>
+        
+        <content type="html">&lt;p&gt;J&#x27;essaye d&#x27;écrire un peu, au milieu du fracas des avions qui décollent d&#x27;un Charles de Gaulle grand et somptueux, à l&#x27;image des destinations qui parsèment le hall des départs. Là-bas y règne tout genre d&#x27;affaires ; des lascars de la finance, les pires des brigands, planqués dans l&#x27;espace business d&#x27;Air France, qui discutent, sirotant un Long Island, du prochain numéro de leur pyramide de Ponzi, qui dans quelques mois viendra fracasser l&#x27;économie mondiale. Du couple, fou amoureux qui pour la première fois part direction les contrées lointaines, faire l&#x27;amour sous un ciel étoilé au milieu d’une plage aussi propre que les outils du toubib qui serviront à ouvrir le ventre de la future maman pour y coller ce foutu masque, hop ! Droit dans la face du nouveau né « Bienvenue, et à présent, le masque est obligatoire sur terre mon p’tit ». Oh ! Et lui là, grand, timide, assis à attendre son vol pour Budapest, un pendentif de la vierge Marie le long du cou, qui attend un signe du ciel regardant devant lui la jolie fille perdue dans son Balzac. Si dieu est grand, c&#x27;est maintenant ou jamais qu&#x27;il se dit, juste avant de se livrer au combat des mots, quand soudain ! Un homme qui ressemblerait bien à Ryan Gosling vient embrasser fougueusement cette même jolie fille devant les yeux tristes et plissés de ce maintenant non-croyant ! L&#x27;Homme est grand, dieu est petit, ça c&#x27;est lui qui vous le dit ! Et ces vieux qui partent en Grèce, qui dans leur sac ont plus de gel hydroalcoolique que de crème solaire ! Et cette femme qui donne des M&amp;amp;M&#x27;s à son Carlin, à son clébard bordel ! Et ces parents qui mangent leur sandwich, pendant que leur boutchou s&#x27;amuse à courir partout, libre qu&#x27;il est, car rien ni personne n’ira cacher le rire éclatant des enfants, même pas ces masques anti-covid qui laissent à peine dépasser  le reflet de l&#x27;âme sur nos visage mornes !&lt;&#x2F;p&gt;
+&lt;p&gt;Mais n&#x27;oublions pas ! Ce petit bonhomme qui ! Bavard dans la tête, s&#x27;amuse à décrire ce qu&#x27;il observe pour son plaisir à lui et pour pouvoir décrocher un demi-sourire aux inconnus qui le liront, un jour ou l&#x27;autre, peut-être.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Insomnie</title>
+        <published>2020-07-23T00:00:00+00:00</published>
+        <updated>2020-07-23T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/insomnie/" type="text/html"/>
+        <id>https://kooparse.com/blog/insomnie/</id>
+        
+        <content type="html">&lt;p&gt;C’est à peine la tête posée sur l’oreiller, avec une envie démesurée d’un saut de l’ange dans les limbes, que mon cerveau ce traitre, se met à démarrer à toute berzingue la machine à penser. &lt;&#x2F;p&gt;
+&lt;p&gt;Et donc me voilà pris au piège dans cette réalité là, au fin fond de cette forêt que l’on appelle “la nuit”, pendant qu’une société calme et sereine ronfle.&lt;&#x2F;p&gt;
+&lt;p&gt;Quoi faire ? Quoi penser ?&lt;&#x2F;p&gt;
+&lt;p&gt;Ici-bas, la fatigue déforme quelque peu la pensée, y dérange sa trajectoire et nous voilà partis pour penser en diagonale ; comme la vie, la pensée réussi toujours à se frayer un chemin, subtil soit-il, pour résoudre les tracas sordides ou non, que notre quotidien rencontre. Mais parfois, le raisonnement d’une pensée en diagonale, peut laisser par chance une trace dans un livre qui s’appelle l’Histoire.&lt;&#x2F;p&gt;
+&lt;p&gt;Après une nuit d’insomnie, on se retrouve contre notre gré, perdu dans la boite de Schrödinger, la tête pressée contre deux états ; l’éveil et le songe. &lt;&#x2F;p&gt;
+&lt;p&gt;Il est déjà tôt à Paris, il fait moche, et c’est toujours une pluie de Klaxons sous son soleil de canicule d’un ciel bien pollué, qui laisse aux agacés, une fois de plus, une raison de l’être. &lt;&#x2F;p&gt;
+&lt;p&gt;Ce sommeil vais-je réussir à le trouver ? C’est toujours comme ça ; on recherche la lune, on y trouve le soleil.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Doliprane</title>
+        <published>2020-06-12T00:00:00+00:00</published>
+        <updated>2020-06-12T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/doliprane/" type="text/html"/>
+        <id>https://kooparse.com/blog/doliprane/</id>
+        
+        <content type="html">&lt;p&gt;J’observe mes souvenirs se dissoudre doucement par le temps comme le Doliprane dans son verre d’eau.&lt;&#x2F;p&gt;
+&lt;p&gt;Des ombres ondulent dans l’appart illuminé par cette lumière chaude qui provient du lampadaire. Le vinyle qui tourne, un parquet qui vibre, les murs qui bougent, des verres qui tombent. Comme des marionnettes à qui on aurait coupé les fils, ils dansent tous, leur nez rouge vif qui pique dans la poudre blanche gesticulant sur l’onde sonique que j’observe, affalé sur le fauteuil, l’acide qui court-circuite mon système nerveux ; les enceintes vomissent un Kanye West à l’apogée de sa carrière. &lt;&#x2F;p&gt;
+&lt;p&gt;Ma jolie blonde qui me tend sa main pour aller danser, que j’aime sa douce odeur de THC le long de sa nuque, lorsqu’elle vient tout juste de fumer son joint. Il en faut des soucis et du bruit pour mettre sa vie en volume, approcher le silence et faire taire le vacarme qui est dans ma tête.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Les pieds sur terre</title>
+        <published>2020-02-20T00:00:00+00:00</published>
+        <updated>2020-02-20T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/les-pieds-sur-terre/" type="text/html"/>
+        <id>https://kooparse.com/blog/les-pieds-sur-terre/</id>
+        
+        <content type="html">&lt;p&gt;Ne pouvant dormir, je pense à ces rêves déchus que je laisse partir. Je titube dans cette époque infernale, à dévaler l’échelle sociale pour m&#x27;éloigner au possible des horreurs de la classe du dessus ; et ces jolies filles qui attendent le métro, à discuter d&#x27;une belle robe qu&#x27;elles ont chiné… puis d&#x27;un air dégoûté, regardent le répugnant qui défèque sa vie sur le quais d&#x27;en face. Des paradoxes comme celui-ci, j&#x27;en suis témoin tous les jours. Où allons-nous… à écouter des sacs chimiques batailler sur des sujets vides de toutes substances, à s&#x27;habituer à la violence des images chocs sur des plateformes qui ne visent que le buzz passager. Dans ce monde, à devoir répondre à l&#x27;impossible équilibre du trop plein de liberté et trop peu de liberté ; l&#x27;un déverse son lot d&#x27;injustice où les forts règnent sur les faibles, puis l&#x27;autre dicte nos moindres choix, nos émotions et nos pensées intimes. La guerre de la raison qui fait rage, s&#x27;écouter soi-même surtout, au prix de l&#x27;union et du pouvoir de l&#x27;ensemble. &lt;&#x2F;p&gt;
+&lt;p&gt;Le bonheur ne se trouve pas en “nous” mais bien avec l’autre ; dans la patience, les compromis et les petites choses. Avec les petites gens et leurs névroses. La vie est longue, jamais vraiment intéressante et le sens manquera toujours. Mais j&#x27;envie ceux qui, tard la nuit, ne pouvant dormir regardent ce petit corps chaud qui se prélasse à côté d’eux ; et se rappellent alors, qu&#x27;à deux on peut bien se foutre du monde qui s&#x27;écroule sur lui-même.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Choisir</title>
+        <published>2020-02-04T00:00:00+00:00</published>
+        <updated>2020-02-04T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/choisir/" type="text/html"/>
+        <id>https://kooparse.com/blog/choisir/</id>
+        
+        <content type="html">&lt;p&gt;Ceux qui disent que le temps fera tout, que le temps triera et qu’il ne faut surtout pas se “prendre la tête”. Et bien, ceux là s’enferment dans des “peut-être”, à s’imaginer un monde qui n’existe que dans leur tête.&lt;&#x2F;p&gt;
+&lt;p&gt;Je préfère choisir, plutôt que de laisser le temps choisir à ma place.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>French Touch</title>
+        <published>2020-01-24T00:00:00+00:00</published>
+        <updated>2020-01-24T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/french-touch/" type="text/html"/>
+        <id>https://kooparse.com/blog/french-touch/</id>
+        
+        <content type="html">&lt;p&gt;Le techno-cocon d’aujourd’hui fait suite à nos milliers d’années d’évolution humaine et de progrès faramineux afin de pouvoir faire venir un chauffeur à l’aide d’une simple app sur notre téléphone intelligent… et finir coincé derrière un camion qui s’arrête à chaque mètre pour ramasser des poubelles. N’y aurait-il pas un fort paradoxe ?&lt;&#x2F;p&gt;
+&lt;p&gt;Tous ont la belle gueule, un début de trentaine et portent la barbe de trois jours. Tous vont au mariage de Camille et Paul, en Italie ou en Grèce. Luc porte un pull avec écrit “Habit du dimanche”, Simon un T-shirt avec une citation de Chirac ; Un autre avec une casquette au style américain mais avec écrit “Ricard”. Pareil pour les filles ; Le pull du Slip Français rentré dans le jean Levis avec écrit “I love French Touch”. Évidement, tous ont la tête dans le marketing, les mains dans la Com’ et les pieds dans des Veja ou des Stan Smith. Ils rigolent et regardent, l’écran géant qui peint leur doux cocon en grève. On y voit un président ferme et autoritaire puis des images prisent dans la nuit, de manifestants en colère et d’agitation policière. Alors des phrases fusent comme “Ils sont fou ces fainéants” ou “Qu’ils trouvent du vrai boulot” ou encore “Pauline a pécho Thomas pendant l’anniv de Théo”. N’y aurait-il pas un fort paradoxe ?&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Memories</title>
+        <published>2019-12-27T06:00:00+00:00</published>
+        <updated>2019-12-27T06:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/memories/" type="text/html"/>
+        <id>https://kooparse.com/blog/memories/</id>
+        
+        <content type="html">&lt;p&gt;I live in the same city but I can’t see her or laugh with her like before, ‘cause she now hates me and laugh with someone else. So I’m having these flashbacks; for every street we walked and moments we lived together. &lt;&#x2F;p&gt;
+&lt;p&gt;…&lt;br &#x2F;&gt;
+…&lt;&#x2F;p&gt;
+&lt;p&gt;This feeling of excitement when she was opening our front door, coming back from work. Asking each other’s day then together we were preparing dinner, listening chill music, watching movies... endlessly.&lt;&#x2F;p&gt;
+&lt;p&gt;I could see myself reading Calvin &amp;amp; Hobbes, lay down in our cozy bed, just besides her. Suddenly I would laugh at loud, then she would smiled at me; asking me to read it too. &lt;&#x2F;p&gt;
+&lt;p&gt;And those mornings of sleepy face, putting everything from the fridge’s stomach to our table; feta, avocado, toasted bread, grapefruit juice for her and coffee for me.&lt;&#x2F;p&gt;
+&lt;p&gt;…&lt;br &#x2F;&gt;
+…&lt;&#x2F;p&gt;
+&lt;p&gt;I just wanted to protect this one part of life that I thought was truly ours from a universe that takes whateve it wants. It took her; she went away for someone else.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Amour</title>
+        <published>2019-11-28T00:00:00+00:00</published>
+        <updated>2019-11-28T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/hidden/amour/" type="text/html"/>
+        <id>https://kooparse.com/hidden/amour/</id>
+        
+        <content type="html">&lt;p&gt;Je refuse de donner raison à ceux qui réduisent l’amour à un simple désir pour l’autre, d’une manifestation du microscopique afin de préserver la pérennité de l’espèce ou encore que l’hédonisme serait une réponse à tout les petits tracas de l’amour. Le véritable ennemi de l’amour est, très justement, la sécurité et le confort de la jouissance.&lt;&#x2F;p&gt;
+&lt;p&gt;J’ai l’intime conviction que l’amour est une proposition à l’existentiel, de vivre la vie du point de vue de la différence, décentré de la pulsion de survie ou de son propre intérêt. C’est faire exister l’autre auprès de soi-même, tel qu’il est. C’est ma conception profonde de l’amour, et elle est loin d’être banale.&lt;&#x2F;p&gt;
+&lt;p&gt;Alors oui, vivre l’expérience authentique et profonde de l’altérité n’est pas facile car c’est aussi l’origine de multiples crises existentielles. Alors souvent il faut s’en remettre à elle l’amour, et faire confiance à la différence.&lt;&#x2F;p&gt;
+&lt;p&gt;Il y a la naissance du monde et de l’éthique dans l’amour où la fidélité désigne une victoire du Nous, du Deux sur le Un ; de l’éternité sur le temps.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Spider Trap</title>
+        <published>2019-11-06T00:00:00+00:00</published>
+        <updated>2019-11-06T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/the-spider-trap/" type="text/html"/>
+        <id>https://kooparse.com/blog/the-spider-trap/</id>
+        
+        <content type="html">&lt;p&gt;&lt;em&gt;(This post is not a declaration of war)&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I keep reflecting on my past few years (seven) working for web startups. Asking myself what problems my brain tried to solves while making web-apps and servers for businesses, but the answer is almost none. In fact, I was mostly using libraries and frameworks to get the job done.&lt;&#x2F;p&gt;
+&lt;p&gt;But you know what? I don’t like having to learn and use libraries in order to complete a specific work. Nether architecting my entire codebase around frameworks that tells me to split my code in an infinite number of files of 10 lines. &lt;em&gt;“Don’t reinvent the wheel”&lt;&#x2F;em&gt; they said, but we keep learning again and again how to use this fucking wheel. We should make our programs from persistent knowledge, not short time best-practices.&lt;&#x2F;p&gt;
+&lt;p&gt;Despite billions of people using websites every day, web clients aren’t designed for today’s usage. To me, it’s a weird paradox; we’re developing programs that target only one “platform” (the browser) so it should be straightforward but instead, we&#x27;re consuming a tremendous amount of tools and frameworks created for only one goal: hacking the browser API.&lt;&#x2F;p&gt;
+&lt;p&gt;Try making rich and complex web-app without any third-party packages and you’re going right in hell. The &lt;em&gt;dom api&lt;&#x2F;em&gt; is a complete mess, and we’re trying to hide it with an infinite pile of libraries. And jeez I didn’t talk about deploying web-apps…&lt;&#x2F;p&gt;
+&lt;p&gt;Ladies and gentlemen, I am ashamed.
+&lt;br&gt;
+&lt;br&gt;
+...
+&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Sometimes, in the late evening, watching the stars; I’m caught dreaming about ourselves re-designing the browser and the web&#x27;s development process with it. With new paradigms, perspectives and ambitions.&lt;&#x2F;p&gt;
+&lt;p&gt;Because in the end, it’s just data with instructions sent to another cpu.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;kooparse.com&#x2F;blog&#x2F;the-spider-trap&#x2F;.&#x2F;stars.jpg&quot; alt=&quot;Wathing the stars&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Memory Arena</title>
+        <published>2019-10-31T00:00:00+00:00</published>
+        <updated>2019-10-31T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/hidden/memory-arena/" type="text/html"/>
+        <id>https://kooparse.com/hidden/memory-arena/</id>
+        
+        <content type="html">&lt;p&gt;For my game, I decided to store almost every entity in a big chunk of memory allocated only once when the program boot. I am using this technique for three reasons. First, I want full and precise control over how memory is managed in the game, second I want better data locality in order to increase cache hits from the cpu, and finally, at runtime asking the operating system in order to allocate more memory is slow.&lt;&#x2F;p&gt;
+&lt;p&gt;All future entities will be stored inside an already allocated array.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;pub struct Arena&amp;lt;T: Debug&amp;gt; {
+    &amp;#x2F;&amp;#x2F; All entity are stored inside this vector.
+    data: Vec&amp;lt;T&amp;gt;,
+    handles: Vec&amp;lt;MemoryHandle&amp;gt;,
+    free_handles: Vec&amp;lt;usize&amp;gt;,
+    version_count: usize,
+}
+
+&amp;#x2F;&amp;#x2F; Sneaky tl;dr example:
+fn main() {
+  &amp;#x2F;&amp;#x2F; Initialize an arena of f32, with a maximum size of 10mb.
+  let arena = Arena::&amp;lt;f32&amp;gt;::size_alloc(10);
+
+  &amp;#x2F;&amp;#x2F; Insert new values.
+  let handle_1 = arena.insert(1.5);
+  let handle_2 = arena.insert(2.5);
+  let handle_3 = arena.insert(3.5);
+
+  &amp;#x2F;&amp;#x2F; Display values.
+  dbg!(arena.get(&amp;amp;handle_1));
+  dbg!(arena.get(&amp;amp;handle_2));
+  dbg!(arena.get(&amp;amp;handle_3));
+
+  &amp;#x2F;&amp;#x2F; Remove a value.
+  arena.remove(handle_1);
+
+  &amp;#x2F;&amp;#x2F; Iterate over all the values.
+  &amp;#x2F;&amp;#x2F; So here, you won&amp;#x27;t see the value from handle_1.
+  arena.iter().for_each(|value| {
+    dbg!(value);
+  });
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;br&#x2F;&gt;
+In Rust, we could specify the capacity of the vector when initializing it with the method `with_capacity`. Until the capacity isn’t reached, every push to the vector will be “free” (no allocation).
+&lt;p&gt;Because I want full control over the memory consumption of my game while developping it; if the amount of memory is exceeded (capacity is reached), the program crash.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;#[test]
+#[should_panic]
+fn exceed_allocated_reserve() {
+    &amp;#x2F;&amp;#x2F; Allocate 10Mb.
+    let mut arena = Arena::&amp;lt;bool&amp;gt;::size_alloc(10);
+    let mut last_handle = MemoryHandle::default();
+    &amp;#x2F;&amp;#x2F; Push elements of 1 byte.
+    for _ in 0..1000_0000 {
+        last_handle = arena.insert(true);
+    }
+
+    assert_eq!(last_handle.value, 999_9999);
+
+    &amp;#x2F;&amp;#x2F; Panic here.
+    arena.insert(true);
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I managed all stored entities with handles, and we always refer to them through their handles. Each handle store the index of his related entity it refer to. If we want to remove an entity, we only mark his handle as dirty.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;#[derive(Debug, Default, Copy, Clone)]
+pub struct MemoryHandle {
+  &amp;#x2F;&amp;#x2F; The entity index
+  value: usize,
+  is_dirty: bool,
+  &amp;#x2F;&amp;#x2F; More on this later…
+  version: usize,
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;So when we insert a new value in the arena, we get a memory handle ready to be used for getting the value.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;#[test]
+fn store_new_block() {
+    let mut arena = Arena::&amp;lt;bool&amp;gt;::size_alloc(10);
+    let handle_0 = arena.insert(true);
+    let handle_1 = arena.insert(true);
+
+    assert_eq!(handle_0.value, 0);
+    assert_eq!(handle_1.value, 1);
+    assert_ne!(handle_0, handle_1);
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Each time we want to read or mutate an entity we use the handle.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&amp;#x2F;&amp;#x2F; My value is a pointer of the stored value.
+let my_value = arena.get(&amp;amp;handle);
+&amp;#x2F;&amp;#x2F; And if we want to mutate the value…
+let my_mut_value = arena.get_mut(&amp;amp;handle);
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;As I said, when we remove an entity, we only mark his handle as dirty, but we also push the index of this dirty handle to an array. Like that, we could re-use our “dirty” handles and replace the “removed” data with a new one.&lt;&#x2F;p&gt;
+&lt;p&gt;Example of this pooling system:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;#[test]
+fn remove_block() {
+    let mut arena = Arena::&amp;lt;bool&amp;gt;::size_alloc(10);
+    let handle_0 = arena.insert(true);
+    let handle_1 = arena.insert(true);
+
+    assert_eq!(handle_0.version, 1);
+    assert_eq!(handle_1.version, 2);
+    arena.remove(handle_0);
+    assert_eq!(arena.handles[0].is_dirty, true);
+
+    let handle_2 = arena.insert(false);
+    assert_eq!(handle_2.version, 3);
+
+    assert_eq!(arena.data[0], false);
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Here&#x27;s an illustration about how entities&#x2F;handles are related to each others. Data vector is referred by Handles, red ones are dirty (free) and finally indexes of dirty handles are stored in an array.
+&lt;img src=&quot;https:&#x2F;&#x2F;kooparse.com&#x2F;hidden&#x2F;memory-arena&#x2F;.&#x2F;arena.jpg&quot; alt=&quot;Arena drawing&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I am versioning every newly generated handle, and increment the version counter every time. So we can’t mess up handles. Comparing an old handle (freed since) and a new one, while both are referring to the same entity index; we won’t have any problems because the “version” isn’t the same.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;impl PartialEq for MemoryHandle {
+    fn eq(&amp;amp;self, other: &amp;amp;Self) -&amp;gt; bool {
+        self.value == other.value &amp;amp;&amp;amp; self.version == other.version
+    }
+}
+
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Also, I have a flush method, to mark all current handles as dirty, and push them into the re-use pool. It’s perfect when we want to load a new scene :)&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;#[test]
+fn flush() {
+    let mut arena = Arena::&amp;lt;bool&amp;gt;::size_alloc(10);
+    let handle_0 = arena.insert(true);
+    let _ = arena.insert(true);
+    let _ = arena.insert(true);
+
+    assert_eq!(*arena.get(&amp;amp;handle_0), true);
+
+    arena.flush();
+
+    let should_panic = catch_unwind(|| arena.get(&amp;amp;handle_0));
+    assert_eq!(should_panic.is_err(), true);
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;That’s all for now! :)&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>About Text Rendering</title>
+        <published>2019-10-30T01:00:00+00:00</published>
+        <updated>2019-10-30T01:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/hidden/about-text-rendering/" type="text/html"/>
+        <id>https://kooparse.com/hidden/about-text-rendering/</id>
+        
+        <content type="html">&lt;p&gt;First, a quick introduction about typeface and font and stuff.&lt;&#x2F;p&gt;
+&lt;p&gt;A typeface is a set of one or more font. So a font is a collection of readable letters (also called glyph) for a specific size and weight of a related typeface.&lt;br&gt;
+A glyph is a shape with embedded properties such as the distance between the further one, the distance from the baseline, etc…&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s an illustration of glyph properties from &lt;a href=&quot;https:&#x2F;&#x2F;developer.apple.com&#x2F;library&#x2F;archive&#x2F;documentation&#x2F;StringsTextFonts&#x2F;Conceptual&#x2F;TextAndWebiPhoneOS&#x2F;TypoFeatures&#x2F;TextSystemFeatures.html&quot;&gt;Text Programming Guide for iOS&lt;&#x2F;a&gt;:
+&lt;img src=&quot;https:&#x2F;&#x2F;kooparse.com&#x2F;hidden&#x2F;about-text-rendering&#x2F;.&#x2F;glyph.jpg&quot; alt=&quot;Glyph metrics&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Oh, and a shape on the screen is “just” a bunch of pixels.
+&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;For my game, I ended up using a bitmap font with a signed distance field encoded in the alpha channel.
+&lt;br&gt;
+&lt;br&gt;
+Tadam, bye, love y&#x27;all.&lt;br&gt;
+Just kidding.&lt;&#x2F;p&gt;
+&lt;p&gt;A bitmap is a matrix of pixels. And a bitmap font is just all the (selected) glyph represented as pixels. In other words, I get one texture with all the glyph inside it. And all the glyph metadata are stored in another file.
+&lt;img src=&quot;https:&#x2F;&#x2F;kooparse.com&#x2F;hidden&#x2F;about-text-rendering&#x2F;.&#x2F;font_atlas.jpg&quot; alt=&quot;Font Atlas&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I use this metadata file (currently in json) to retrieve each glyph on this texture with all their specific properties. A quick example for the letter “A”:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;json&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&amp;quot;A&amp;quot;: {
+    &amp;quot;x&amp;quot;:544,
+    &amp;quot;y&amp;quot;:54,
+    &amp;quot;width&amp;quot;:40,
+    &amp;quot;height&amp;quot;:42,
+    &amp;quot;originX&amp;quot;:6,
+    &amp;quot;originY&amp;quot;:36,
+    &amp;quot;advance&amp;quot;:27
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We could easily find the letter on the texture with those properties and construct the letter quad.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;top left: (x, y).&lt;br&gt;
+top right: (x + width).&lt;br&gt;
+bottom left: (x, y + height).&lt;br&gt;
+bottom right: (x + width, y + height).&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;em&gt;(careful here, “x” and “y” are not computed in pixels, we have to divide “x” by the texture width to get it, same for “y” with the texture height).&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;And if we want to draw a letter, we construct a quad and positioning it at the cursor (a variable starting at 0 if it&#x27;s the first letter), then we place the quad on the baseline using originX and originY. Finally we draw the quad and increment the cursor with the glyph advance, for the next one.&lt;&#x2F;p&gt;
+&lt;p&gt;Quick illustration:
+&lt;img src=&quot;https:&#x2F;&#x2F;kooparse.com&#x2F;hidden&#x2F;about-text-rendering&#x2F;.&#x2F;quads_draw.jpg&quot; alt=&quot;Quads drawing&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;An implementation in Rust where &amp;quot;&lt;code&gt;atlas_pos_x&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;atlas_pos_y&lt;&#x2F;code&gt;&amp;quot; are &amp;quot;&lt;code&gt;x&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;y&lt;&#x2F;code&gt;&amp;quot; and &amp;quot;&lt;code&gt;atlas_with&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;atlas_height&lt;&#x2F;code&gt;&amp;quot; are 
+the size in pixels of our bitmap font. The &amp;quot;&lt;code&gt;scale&lt;&#x2F;code&gt;&amp;quot; is the font size applied. Also this piece of code is iterating over the text&#x27;s letters.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&amp;#x2F;&amp;#x2F; Position of the glyph on the texture atlas.
+let (top_left, top_right, bottom_left, bottom_right) = {
+    let top_left = (
+        letter.atlas_pos_x &amp;#x2F; self.atlas_width,
+        letter.atlas_pos_y &amp;#x2F; self.atlas_height,
+    );
+
+    let top_right = (
+        top_left.0 + (letter.width &amp;#x2F; self.atlas_width),
+        top_left.1,
+    );
+
+    let bottom_left = (
+        top_left.0,
+        top_left.1 + (letter.height &amp;#x2F; self.atlas_height),
+    );
+
+    let bottom_right = (top_right.0, bottom_left.1);
+
+    (top_left, top_right, bottom_left, bottom_right)
+};
+&amp;#x2F;&amp;#x2F; 
+&amp;#x2F;&amp;#x2F; 0 is our baseline.
+let x_pos = (cursor - letter.origin_x) * scale;
+let y_pos = (0. - (letter.height - letter.origin_y)) * scale;
+let width = letter.width * scale;
+let height = letter.height * scale;
+
+&amp;#x2F;&amp;#x2F; Quad data for our character with texture position based on 
+&amp;#x2F;&amp;#x2F; character metadata.
+#[rustfmt::skip]
+let character_quad: [f32; 24] = [
+    x_pos, y_pos + height,  top_left.0, top_left.1,
+    x_pos,  y_pos,          bottom_left.0, bottom_left.1,
+    x_pos + width, y_pos,   bottom_right.0, bottom_right.1,
+
+    x_pos, y_pos + height,  top_left.0, top_left.1,
+    x_pos + width, y_pos,   bottom_right.0, bottom_right.1,
+    x_pos + width, y_pos + height, top_right.0, top_right.1,
+];
+
+&amp;#x2F;&amp;#x2F; All the text quads are stored in this vertices array.
+&amp;#x2F;&amp;#x2F; We will send this to our GPU to draw all the quads.
+vertices.extend_from_slice(&amp;amp;character_quad);
+cursor += letter.advance;
+
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;br&gt;
+Everything is awesome but wait. If I change the size of my font without scaling the texture… my text will be blurry right? So each time I want to scale up&#x2F;down my text… I should use a new texture (and load it to the gpu, etc…)? Really!? Really!?
+&lt;p&gt;As an example, a font generated with a size of 32px, then rendered with text scaled to 51px:
+&lt;img src=&quot;https:&#x2F;&#x2F;kooparse.com&#x2F;hidden&#x2F;about-text-rendering&#x2F;.&#x2F;unsigned.png&quot; alt=&quot;Blurry scaled text rendered&quot; &#x2F;&gt;
+&lt;br&gt;
+Yup, it&#x27;s blurry.&lt;&#x2F;p&gt;
+&lt;p&gt;To fix that, we are going to use a computed signed distance field. This technique comes from Valve, and was first used for Team Fortress 2. If you want more information about how they used it, it&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;steamcdn-a.akamaihd.net&#x2F;apps&#x2F;valve&#x2F;2007&#x2F;SIGGRAPH2007_AlphaTestedMagnification.pdf&quot;&gt;here&lt;&#x2F;a&gt;.
+&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Now, what is a signed distance field? In the context of font rendering, a distance field is a distance from a given pixel to the middle of his related glyph shape. This distance will be stored in the 8-bit alpha channel in a range of &lt;code&gt;0&lt;&#x2F;code&gt; to &lt;code&gt;255&lt;&#x2F;code&gt; mapped to &lt;code&gt;[0, 1]&lt;&#x2F;code&gt;. Where 0 is the maximum negative value, and 1 the maximum positive value, also 0.5 will then represent the exact position of the edge. So any value from 0 to 0.5 should be inside the shape, and 0.5 to 1 outside it.&lt;&#x2F;p&gt;
+&lt;p&gt;I drew the letter &amp;quot;C&amp;quot; and picked 3 points.
+&lt;img src=&quot;https:&#x2F;&#x2F;kooparse.com&#x2F;hidden&#x2F;about-text-rendering&#x2F;.&#x2F;sdf_draw.jpg&quot; alt=&quot;Signed distance field drawing&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The points A is inside the shape and exactly in the middle, so the value is 0. Point B is totally outside the shape, so the value is 1; the point C is exactly on the edge so the value is 0.5 and every point near the edge (represented by the red line) are in the range &lt;code&gt;[0, 1]&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;But, if we render our text with this technique, we get a very aliased text effect. Not really what we wanted.
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;kooparse.com&#x2F;hidden&#x2F;about-text-rendering&#x2F;.&#x2F;aliased.png&quot; alt=&quot;Aliased text rendering&quot; &#x2F;&gt;
+&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;So in the fragment shader, we could interpolate values near the edge of the shape like &lt;code&gt;[0.4, 0.6]&lt;&#x2F;code&gt;. This will produce a smooth text, as follows.
+&lt;br&gt;
+&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;kooparse.com&#x2F;hidden&#x2F;about-text-rendering&#x2F;.&#x2F;smooth.png&quot; alt=&quot;Smooth text rendering&quot; &#x2F;&gt;
+&lt;br&gt;
+And voilà.&lt;br&gt;
+Everything is smooth and tidy and clean and beautiful and...&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Progression in the Unknown</title>
+        <published>2019-10-30T00:00:00+00:00</published>
+        <updated>2019-10-30T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/progression-in-the-unknown/" type="text/html"/>
+        <id>https://kooparse.com/blog/progression-in-the-unknown/</id>
+        
+        <content type="html">&lt;p&gt;When you start exploring new and unknown fields; even with all the time you need, it could be harder than you think to keep focus (and sane).&lt;&#x2F;p&gt;
+&lt;p&gt;Because rapidly, basic knowledge of other fields are needed to keep moving forward, and you have to stop your progression in order to learn them. In fact, in the beginning, you are moving very slowly. So doubts are starting to emerge… and kill your motivation. You will keep this feeling for yourself because you have nothing to show (yet).&lt;&#x2F;p&gt;
+&lt;p&gt;When I started game development, I often felt depressed after hours trying to draw some triangles on the screen. Even after that, I struggled with understanding transformation matrices, collision equations… And I wasn’t particularly &amp;quot;good&amp;quot; at math when I was younger… so now trying to really understand all those were kind of odd. &lt;&#x2F;p&gt;
+&lt;p&gt;But with a bit of patience and time, it gets better. You will build intuition, you will finally understand things you couldn’t before, and above all, you will deeply trust yourself about learning new things. &lt;&#x2F;p&gt;
+&lt;p&gt;You will feel invincible.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Parisian Metro</title>
+        <published>2019-08-16T09:00:00+00:00</published>
+        <updated>2019-08-16T09:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/parisian-metro/" type="text/html"/>
+        <id>https://kooparse.com/blog/parisian-metro/</id>
+        
+        <content type="html">&lt;p&gt;Holding each other&#x27;s hand.&lt;br&gt;
+The girl was facing the boy who was carrying a shopping bag.&lt;&#x2F;p&gt;
+&lt;p&gt;Suddenly but kindly, the girl retrieves the strap from the bag that was falling off the boy’s shoulder; then her purse fell to the ground thus the boy pick it up slowly, to give her back.&lt;&#x2F;p&gt;
+&lt;p&gt;I smiled.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Gap</title>
+        <published>2019-08-16T06:00:00+00:00</published>
+        <updated>2019-08-16T06:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/the-gap/" type="text/html"/>
+        <id>https://kooparse.com/blog/the-gap/</id>
+        
+        <content type="html">&lt;p&gt;In the spacious and bright room crowded with tiny human beings with gigantic desire in their eyes, their hands full of painting drops; Craving to launch those kites far up in the sky.&lt;&#x2F;p&gt;
+&lt;p&gt;We could hear the echoes of their laughs and enthusiastic gibberish conversations.&lt;&#x2F;p&gt;
+&lt;p&gt;Nothing mattered more in the world than a piece of wood entangled with twines and papers; flying above them.&lt;&#x2F;p&gt;
+&lt;p&gt;And yet, 25 years from the nursery school; After joining the workforce of boiling cities, an entire life of tiny loops made of same weeks and weekends; There, tiny brains have to choose between good and bad, while their fingers are swapping left or right, and their eyes are desperately looking around, anything sexual or shiny or funny.&lt;&#x2F;p&gt;
+&lt;p&gt;Nothing matter more now, than those small drops of dopamine pouring into the human system.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Loss</title>
+        <published>2019-08-16T00:00:00+00:00</published>
+        <updated>2019-08-16T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/the-loss/" type="text/html"/>
+        <id>https://kooparse.com/blog/the-loss/</id>
+        
+        <content type="html">&lt;p&gt;I remember this boy, crying, with his head on the wooden floor and his arms shakingly grabbing his knees. Screaming &lt;em&gt;“why”&lt;&#x2F;em&gt; endlessly.&lt;&#x2F;p&gt;
+&lt;p&gt;I would like to take a piece of his pain, to ease him a bit.&lt;&#x2F;p&gt;
+&lt;p&gt;Then my body is starting to fall under the weight of the gravity; taking chairs, tables, even the floor with it. &lt;&#x2F;p&gt;
+&lt;p&gt;I feel the frozen matter around my neck.&lt;br&gt;
+I shiver all over.&lt;br&gt;
+I close my eyes.&lt;br&gt; &lt;&#x2F;p&gt;
+&lt;p&gt;I am this boy.&lt;br&gt;
+And I am crying now.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Réponse</title>
+        <published>2019-08-12T00:00:00+00:00</published>
+        <updated>2019-08-12T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/hidden/marion-end/" type="text/html"/>
+        <id>https://kooparse.com/hidden/marion-end/</id>
+        
+        <content type="html">&lt;p&gt;&lt;b&gt;Mar,&lt;&#x2F;b&gt;
+&lt;br&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Je n’arrive plus à t’écrire.&lt;br&gt;
+J’ai un brouillon avec 6000 lignes.
+&lt;br&gt;
+&lt;br&gt;
+Je me souviens, de cette année où l’on est parti marcher pendant 10 jours à Fuerteventura. Puis un vol pour trois semaines en Chine, côte à côte assis dans un wagon pour 17h. Et Prague et nos weekends, puis London.&lt;br&gt;
+On s’aimait comme des fous ; c’était seulement l’année dernière, London en septembre dernier. Et tu sautes sur le premier qui arrive à te séduire. Tu es tombé dans le piège, et tu le sais, alors tu fermes les yeux, et tu avances, tel un enfant face à sa bêtise, qui se convainc qu&#x27;il avait raison, que c&#x27;était la bonne chose à faire, que j&#x27;étais le problème, nous, notre relation. Il était notre cancer.&lt;&#x2F;p&gt;
+&lt;p&gt;Je me souviens de m’être effondré pour la santé de ma mère, quand toi, tu pleurais pour des mensonges. Je n’ai eu aucun soutiens, qu’une bonne gifle quelques jours plus tard.&lt;&#x2F;p&gt;
+&lt;p&gt;La seule responsabilité prise, à été la mienne en ajoutant un grain d’honnêteté et de vérité à votre jolie bordel.&lt;&#x2F;p&gt;
+&lt;p&gt;Je n’arrive toujours pas à saisir, la portée de tes convictions ainsi que ton égoïsme et ta lâcheté de continuer tes journées avec lui, alors qu’Olivia souffre tous les jours à côté.&lt;br&gt;
+Laisse-moi vomir.&lt;&#x2F;p&gt;
+&lt;p&gt;L’époque peut être fier de toi.&lt;br&gt;
+Machine dans la vie professionnelle puis consommateur infidèle dans la vie personnelle. Et ça change son petit titre sur Linkedin. Que l’on t’applaudisse.&lt;&#x2F;p&gt;
+&lt;p&gt;Le bonheur ne se trouve pas en &lt;em&gt;“nous”&lt;&#x2F;em&gt; mais bien avec l’autre. Et dans la patience, et les compromis et les petites choses.
+Avec les petits gens et leur névroses.&lt;br&gt;
+La vie est longue, jamais vraiment intéressante. Et le sens manquera toujours.&lt;&#x2F;p&gt;
+&lt;p&gt;Et épargne moi ton &lt;em&gt;“j’ai beaucoup appris à tes côtés”&lt;&#x2F;em&gt;. Je ne suis pas ton mentor.&lt;br&gt;
+Garde cette phrase pour le fatidique jour où tu partiras de l’agence.&lt;&#x2F;p&gt;
+&lt;p&gt;Moi j’étais simplement heureux à tes côtés, et oh que ça me suffisait.&lt;br&gt;
+En colère comme la foudre, tu n&#x27;imagines pas ma peine.&lt;&#x2F;p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;Le Canada vient d’accepter mon visa.&lt;br&gt;
+À Paris, j&#x27;espère y laisser mon coeur brisé.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Je m’envole début septembre.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Family</title>
+        <published>2019-01-10T00:00:00+00:00</published>
+        <updated>2019-01-10T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/family/" type="text/html"/>
+        <id>https://kooparse.com/blog/family/</id>
+        
+        <content type="html">&lt;p&gt;You miss them.&lt;br&#x2F;&gt;
+And you come and laugh with them.&lt;br &#x2F;&gt;
+Then you hate them.&lt;br &#x2F;&gt;
+And you leave.&lt;br &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;You miss them.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Glass Cage</title>
+        <published>2019-01-09T00:00:00+00:00</published>
+        <updated>2019-01-09T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/blog/the-glass-cage/" type="text/html"/>
+        <id>https://kooparse.com/blog/the-glass-cage/</id>
+        
+        <content type="html">&lt;p&gt;X is sick. And he doesn’t know what to do.&lt;&#x2F;p&gt;
+&lt;p&gt;He sings, and sometimes he dances alone where nobody can’t see him.&lt;&#x2F;p&gt;
+&lt;p&gt;He likes to talk. Discussing things, many things in front of people he rather knows very well.&lt;&#x2F;p&gt;
+&lt;p&gt;He likes to change his job every year or two. Accustomed to interviews, he is pretty confident each time the occasion arrived.&lt;&#x2F;p&gt;
+&lt;p&gt;He loves his girlfriend very much. And sometimes asked himself why he’s so lucky.&lt;&#x2F;p&gt;
+&lt;p&gt;Friendship is important for him. A close friend has more value for him than to be part of any group of friends. So he chooses wisely his friends.&lt;&#x2F;p&gt;
+&lt;p&gt;He seems to be pretty normal.&lt;&#x2F;p&gt;
+&lt;p&gt;And sometimes, a beautiful but painful invitation knocks at his door. Saying that he is invited to a small party, with cheering and dancing on 80’ music with people he — of course — not know.&lt;&#x2F;p&gt;
+&lt;p&gt;The panic seized him by the stomach. Like that grumpy cat forced to take his bath.&lt;&#x2F;p&gt;
+&lt;p&gt;If he had the choice between teaching the life of cephalopods in front of a thousand people — I should remind you that he knows nothing about cephalopods — and going to this small party of maybe 10 strangers, he will surely, with his strong rational capacity, choose the cephalopods.&lt;&#x2F;p&gt;
+&lt;p&gt;What is wrong with him, you would ask.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Mélange de pensées 3</title>
+        <published>2017-10-17T00:00:00+00:00</published>
+        <updated>2017-10-17T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/hidden/melange-de-pensees-3/" type="text/html"/>
+        <id>https://kooparse.com/hidden/melange-de-pensees-3/</id>
+        
+        <content type="html">&lt;p&gt;Prendre le train et voir cette grande ville aux odeurs de pisse s’éloigner et disparaitre petit à petit sous la ligne oranger de l’horizon pollué, me calme et me fait du bien.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Mélange de pensées 2</title>
+        <published>2017-06-29T00:00:00+00:00</published>
+        <updated>2017-06-29T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/hidden/melange-de-pensees-2/" type="text/html"/>
+        <id>https://kooparse.com/hidden/melange-de-pensees-2/</id>
+        
+        <content type="html">&lt;p&gt;Maudit lundi, trop chaud l’été, trop froid l’hiver, trop tôt le matin et jamais fier de son sort. Il faut du courage pour traverser le temps.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Mélange de pensés 1</title>
+        <published>2017-04-25T00:00:00+00:00</published>
+        <updated>2017-04-25T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/hidden/melange-de-pensees-1/" type="text/html"/>
+        <id>https://kooparse.com/hidden/melange-de-pensees-1/</id>
+        
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;“les organisations étudiantes appellent à manifester contre Le Pen” — Le monde
+&lt;br&gt;
+“Le Parti socialiste appelle à voter Macron” — Le figaro
+&lt;br&gt;
+“Quels people étaient avec Macron à La Rotonde?” — 20 minutes
+&lt;br&gt;
+“Les électeurs de Marine Le Pen et d’Emmanuel Macron : le choc de deux France” — Le Parisien
+&lt;br&gt;
+“François Fillon éliminé : comment la droite s’apprête à régler ses comptes” — Marianne
+&lt;br&gt;
+“Chirac a merdé en 2002, Macron doit s’en souvenir” — Libération&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;br&gt;
+Les agités brandissent fièrement les drapeaux bleu-blanc-rouge qui virevoltent à toute allure. Les cris fusent en direction de l’humanoïde en costume qui, d’un geste de la main remercia la marée humaine. Le métronome est En Marche.
+&lt;p&gt;Là-bas, de l’autre côté du plafond, des tables et des miroirs, ceux qui fuient l’agitation. Se réfugiant dans le calme de la nuit, les perdus dans l’espace regardent les éoliennes bouger lentement. Les têtes tournent ainsi que les rêves et les planètes. Puis les idées fusent et le feu d’artifice commence.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Remède</title>
+        <published>2016-11-25T00:00:00+00:00</published>
+        <updated>2016-11-25T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/hidden/remede/" type="text/html"/>
+        <id>https://kooparse.com/hidden/remede/</id>
+        
+        <content type="html">&lt;p&gt;Petites bulles imaginaires remplies d’oxygène dans lesquelles nos vies s’épanouissent. Là-bas, on y brûle, on y pleure, on y dort, on y est roi.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Lucidus</title>
+        <published>2016-02-19T00:00:00+00:00</published>
+        <updated>2016-02-19T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/hidden/lucidus/" type="text/html"/>
+        <id>https://kooparse.com/hidden/lucidus/</id>
+        
+        <content type="html">&lt;p&gt;Seul, loin de tous. 
+&lt;br&gt;
+Prendre le temps. 
+&lt;br&gt;
+Réfléchir sur nous, sur eux, sur tout. 
+&lt;br&gt;
+Faire.&lt;&#x2F;p&gt;
+&lt;p&gt;Pendant ces moments intenses d’extrême attention, où notre flux créatif se déverse sans retenu, transformant nos visions en réalité, tordant mondes et univers, créant formes et volumes, anéantissant armées et empires, construisant modèles et cités, utilisant nos plus profondes rages comme forces pour faire plier tout destin ou chemin tracé, qu’enfin la nécessité d’être se dévoile à nous-mêmes et que, nous ne sommes peut-être pas qu’infime poussière d’étoiles perdue au fin fond du cosmos.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Tu votes</title>
+        <published>2016-01-30T00:00:00+00:00</published>
+        <updated>2016-01-30T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/hidden/tu-votes/" type="text/html"/>
+        <id>https://kooparse.com/hidden/tu-votes/</id>
+        
+        <content type="html">&lt;p&gt;Tu décides, tu votes.&lt;&#x2F;p&gt;
+&lt;p&gt;Quand tu descends tes poubelles et que tu dois choisir entre la jaune et la verte, tu votes.&lt;&#x2F;p&gt;
+&lt;p&gt;Quand tu décides de mettre ton budget dans de la nourriture de qualité et saine pour toi plutôt que de la bouffe industrielle qui finira par te tuer, tu votes.&lt;&#x2F;p&gt;
+&lt;p&gt;Quand tu donnes des euros à un sans-abri en sortant du shop les bras remplis d’paquets, tu votes.&lt;&#x2F;p&gt;
+&lt;p&gt;Quand tu décides de te battre pour défendre quelqu’un qui se fait insulter sans raison dans le métro, tu votes.&lt;&#x2F;p&gt;
+&lt;p&gt;Quand tu prends le risque de frauder la SNCF, car tu n’as pas les moyens et que c’est juste trop cher, tu votes.&lt;&#x2F;p&gt;
+&lt;p&gt;Quand tu passes ta soirée seul chez toi à avancer sur tes plans plutôt que de te mettre une mine avec tes potes pour t’oublier, tu votes.&lt;&#x2F;p&gt;
+&lt;p&gt;Quand tu décides de ne pas voter lors des élections qui ont lieu une fois tous les cinq ans, car ces putes veulent que trop rarement ton avis, tu votes.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>You</title>
+        <published>2015-05-09T00:00:00+00:00</published>
+        <updated>2015-05-09T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://kooparse.com/hidden/you/" type="text/html"/>
+        <id>https://kooparse.com/hidden/you/</id>
+        
+        <content type="html">&lt;p&gt;&lt;b&gt;You&lt;&#x2F;b&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;b&gt;Stop&lt;&#x2F;b&gt; not trusting yourself, or thinking you aren’t smart or good enough, or you haven’t had enough experiences, or you don’t have the time or you simply can’t do it.&lt;&#x2F;p&gt;
+&lt;p&gt;A cool dude once said: &lt;i&gt;“Everything around you that you call life was made up by people that were no smarter than you.”&lt;&#x2F;i&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

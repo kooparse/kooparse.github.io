@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <meta name="twitter:site" content="@kooparse">
+    <meta name="twitter:creator" content="@kooparse">
+    <meta name="twitter:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="Alex&#x27;s thinking box">
+    <meta name="og:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/favicon.png" rel="icon">
+    <link href="https:&#x2F;&#x2F;kooparse.com&#x2F;blog&#x2F;progression-in-the-unknown&#x2F;" rel="canonical">
+
+    
+  <title>Progression in the Unknown | Alex&#x27;s thinking box</title>
+  <meta name="description" content="How to keep forward when learning new things.">
+  <meta name="twitter:title" content="Progression in the Unknown">
+  <meta name="twitter:description" content="How to keep forward when learning new things.">
+  <meta name="og:title" content="Progression in the Unknown">
+  <meta name="og:description" content="How to keep forward when learning new things.">
+
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/global.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar__container">
+      <div class="navbar__wrapper">
+        <div class="navbar__item">
+          <a href="/" id="writing">
+            <div class="navbar__item">Writing</div>
+          </a>
+        </div>
+        <div class="navbar__item">
+          <a href="/about" id="about">
+            <div class="navbar__item">About</div>
+          </a>
+        </div>
+      </div>
+
+      <div class ="navbar__night_switcher" id="night-switcher">
+        <span id="switcher-icon" style="font-size: 22px;">
+        </span>
+      </div>
+    </div>
+
+    
+<div class="main__container">
+  <div class="post__spacer">
+    <div class="posts__header">
+      <h3 class="post__title">
+        Progression in the Unknown
+      </h3>
+    </div>
+    <div class="post__date">
+      October 30, 2019
+    </div>
+    <div class="post__separator"></div>
+
+      <div class="post__text" />
+        <p>When you start exploring new and unknown fields; even with all the time you need, it could be harder than you think to keep focus (and sane).</p>
+<p>Because rapidly, basic knowledge of other fields are needed to keep moving forward, and you have to stop your progression in order to learn them. In fact, in the beginning, you are moving very slowly. So doubts are starting to emerge… and kill your motivation. You will keep this feeling for yourself because you have nothing to show (yet).</p>
+<p>When I started game development, I often felt depressed after hours trying to draw some triangles on the screen. Even after that, I struggled with understanding transformation matrices, collision equations… And I wasn’t particularly &quot;good&quot; at math when I was younger… so now trying to really understand all those were kind of odd. </p>
+<p>But with a bit of patience and time, it gets better. You will build intuition, you will finally understand things you couldn’t before, and above all, you will deeply trust yourself about learning new things. </p>
+<p>You will feel invincible.</p>
+
+      </div>
+      <hr class="post__end_liner" />
+
+      <ul class="post__footer">
+        <li class="post__footer_block post__prev_block">
+          
+        </li>
+
+        <li class="post__footer_block post__next_block">
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+    <script>
+      window.__is_about = /about\/$/.test(window.location.href);
+      window.__isNightMode = !!window.localStorage.getItem('isNightMode');
+
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.add(window.__isNightMode ? 'dark' : 'light');
+
+      const writing_nav = document.getElementById('writing');
+      const about_nav = document.getElementById('about');
+      const switcher_icon = document.getElementById('switcher-icon');
+
+      if (window.__is_about) {
+            writing_nav.classList.remove('active_tab');
+            about_nav.classList.add('active_tab');
+      } else {
+          writing_nav.classList.add('active_tab');
+          about_nav.classList.remove('active_tab');
+      }
+
+      document.getElementById("night-switcher")
+        .addEventListener("click", () => window.__setTheme());
+
+      switcher_icon.classList.add(window.__isNightMode 
+        ? 'icon-moon-solid' 
+        : 'icon-moon-regular'
+      );
+
+      window.__setTheme = function() {
+          const isNightMode = window.localStorage.getItem('isNightMode')
+
+          if (isNightMode) {
+            window.localStorage.removeItem('isNightMode')
+            body.classList.remove('dark');
+            body.classList.add('light');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-regular')
+          } else {
+            window.localStorage.setItem('isNightMode', 'true')
+            body.classList.remove('light');
+            body.classList.add('dark');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-solid')
+          }
+
+          window.__isNightMode = !isNightMode;
+      }
+    </script>
+
+    <script data-goatcounter="https://kooparse.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </body>
+
+</html>

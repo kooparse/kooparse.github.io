@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <meta name="twitter:site" content="@kooparse">
+    <meta name="twitter:creator" content="@kooparse">
+    <meta name="twitter:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="Alex&#x27;s thinking box">
+    <meta name="og:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/favicon.png" rel="icon">
+    <link href="https:&#x2F;&#x2F;kooparse.com&#x2F;blog&#x2F;kaboom&#x2F;" rel="canonical">
+
+    
+  <title>Kaboom | Alex&#x27;s thinking box</title>
+  <meta name="description" content="">
+  <meta name="twitter:title" content="Kaboom">
+  <meta name="twitter:description" content="">
+  <meta name="og:title" content="Kaboom">
+  <meta name="og:description" content="">
+
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/global.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar__container">
+      <div class="navbar__wrapper">
+        <div class="navbar__item">
+          <a href="/" id="writing">
+            <div class="navbar__item">Writing</div>
+          </a>
+        </div>
+        <div class="navbar__item">
+          <a href="/about" id="about">
+            <div class="navbar__item">About</div>
+          </a>
+        </div>
+      </div>
+
+      <div class ="navbar__night_switcher" id="night-switcher">
+        <span id="switcher-icon" style="font-size: 22px;">
+        </span>
+      </div>
+    </div>
+
+    
+<div class="main__container">
+  <div class="post__spacer">
+    <div class="posts__header">
+      <h3 class="post__title">
+        Kaboom
+      </h3>
+    </div>
+    <div class="post__date">
+      October 29, 2022
+    </div>
+    <div class="post__separator"></div>
+
+      <div class="post__text" />
+        <p>Tout déconstruire ; toi, moi, les hommes et les femmes, le sexe, les mots et la langue, jusqu'à gangrène et addiction. On décortique le homard, on dépèce le lapin, on dévisse la tête des rois, on désosses ceux qui en ont déjà fini avec la vie, on désassemble l'organique et la matière. Diviser les coeurs et les peuples, les fortunés et les pauvres, l'eau et le feu. Pulsion inaltérable puis dans un dernier élan de grâce, on divise l'atome de lui-même.</p>
+<p>Kaboom.</p>
+
+      </div>
+      <hr class="post__end_liner" />
+
+      <ul class="post__footer">
+        <li class="post__footer_block post__prev_block">
+          
+        </li>
+
+        <li class="post__footer_block post__next_block">
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+    <script>
+      window.__is_about = /about\/$/.test(window.location.href);
+      window.__isNightMode = !!window.localStorage.getItem('isNightMode');
+
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.add(window.__isNightMode ? 'dark' : 'light');
+
+      const writing_nav = document.getElementById('writing');
+      const about_nav = document.getElementById('about');
+      const switcher_icon = document.getElementById('switcher-icon');
+
+      if (window.__is_about) {
+            writing_nav.classList.remove('active_tab');
+            about_nav.classList.add('active_tab');
+      } else {
+          writing_nav.classList.add('active_tab');
+          about_nav.classList.remove('active_tab');
+      }
+
+      document.getElementById("night-switcher")
+        .addEventListener("click", () => window.__setTheme());
+
+      switcher_icon.classList.add(window.__isNightMode 
+        ? 'icon-moon-solid' 
+        : 'icon-moon-regular'
+      );
+
+      window.__setTheme = function() {
+          const isNightMode = window.localStorage.getItem('isNightMode')
+
+          if (isNightMode) {
+            window.localStorage.removeItem('isNightMode')
+            body.classList.remove('dark');
+            body.classList.add('light');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-regular')
+          } else {
+            window.localStorage.setItem('isNightMode', 'true')
+            body.classList.remove('light');
+            body.classList.add('dark');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-solid')
+          }
+
+          window.__isNightMode = !isNightMode;
+      }
+    </script>
+
+    <script data-goatcounter="https://kooparse.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <meta name="twitter:site" content="@kooparse">
+    <meta name="twitter:creator" content="@kooparse">
+    <meta name="twitter:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="Alex&#x27;s thinking box">
+    <meta name="og:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/favicon.png" rel="icon">
+    <link href="https:&#x2F;&#x2F;kooparse.com&#x2F;blog&#x2F;insomnie&#x2F;" rel="canonical">
+
+    
+  <title>Insomnie | Alex&#x27;s thinking box</title>
+  <meta name="description" content="">
+  <meta name="twitter:title" content="Insomnie">
+  <meta name="twitter:description" content="">
+  <meta name="og:title" content="Insomnie">
+  <meta name="og:description" content="">
+
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/global.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar__container">
+      <div class="navbar__wrapper">
+        <div class="navbar__item">
+          <a href="/" id="writing">
+            <div class="navbar__item">Writing</div>
+          </a>
+        </div>
+        <div class="navbar__item">
+          <a href="/about" id="about">
+            <div class="navbar__item">About</div>
+          </a>
+        </div>
+      </div>
+
+      <div class ="navbar__night_switcher" id="night-switcher">
+        <span id="switcher-icon" style="font-size: 22px;">
+        </span>
+      </div>
+    </div>
+
+    
+<div class="main__container">
+  <div class="post__spacer">
+    <div class="posts__header">
+      <h3 class="post__title">
+        Insomnie
+      </h3>
+    </div>
+    <div class="post__date">
+      July 23, 2020
+    </div>
+    <div class="post__separator"></div>
+
+      <div class="post__text" />
+        <p>C’est à peine la tête posée sur l’oreiller, avec une envie démesurée d’un saut de l’ange dans les limbes, que mon cerveau ce traitre, se met à démarrer à toute berzingue la machine à penser. </p>
+<p>Et donc me voilà pris au piège dans cette réalité là, au fin fond de cette forêt que l’on appelle “la nuit”, pendant qu’une société calme et sereine ronfle.</p>
+<p>Quoi faire ? Quoi penser ?</p>
+<p>Ici-bas, la fatigue déforme quelque peu la pensée, y dérange sa trajectoire et nous voilà partis pour penser en diagonale ; comme la vie, la pensée réussi toujours à se frayer un chemin, subtil soit-il, pour résoudre les tracas sordides ou non, que notre quotidien rencontre. Mais parfois, le raisonnement d’une pensée en diagonale, peut laisser par chance une trace dans un livre qui s’appelle l’Histoire.</p>
+<p>Après une nuit d’insomnie, on se retrouve contre notre gré, perdu dans la boite de Schrödinger, la tête pressée contre deux états ; l’éveil et le songe. </p>
+<p>Il est déjà tôt à Paris, il fait moche, et c’est toujours une pluie de Klaxons sous son soleil de canicule d’un ciel bien pollué, qui laisse aux agacés, une fois de plus, une raison de l’être. </p>
+<p>Ce sommeil vais-je réussir à le trouver ? C’est toujours comme ça ; on recherche la lune, on y trouve le soleil.</p>
+
+      </div>
+      <hr class="post__end_liner" />
+
+      <ul class="post__footer">
+        <li class="post__footer_block post__prev_block">
+          
+        </li>
+
+        <li class="post__footer_block post__next_block">
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+    <script>
+      window.__is_about = /about\/$/.test(window.location.href);
+      window.__isNightMode = !!window.localStorage.getItem('isNightMode');
+
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.add(window.__isNightMode ? 'dark' : 'light');
+
+      const writing_nav = document.getElementById('writing');
+      const about_nav = document.getElementById('about');
+      const switcher_icon = document.getElementById('switcher-icon');
+
+      if (window.__is_about) {
+            writing_nav.classList.remove('active_tab');
+            about_nav.classList.add('active_tab');
+      } else {
+          writing_nav.classList.add('active_tab');
+          about_nav.classList.remove('active_tab');
+      }
+
+      document.getElementById("night-switcher")
+        .addEventListener("click", () => window.__setTheme());
+
+      switcher_icon.classList.add(window.__isNightMode 
+        ? 'icon-moon-solid' 
+        : 'icon-moon-regular'
+      );
+
+      window.__setTheme = function() {
+          const isNightMode = window.localStorage.getItem('isNightMode')
+
+          if (isNightMode) {
+            window.localStorage.removeItem('isNightMode')
+            body.classList.remove('dark');
+            body.classList.add('light');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-regular')
+          } else {
+            window.localStorage.setItem('isNightMode', 'true')
+            body.classList.remove('light');
+            body.classList.add('dark');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-solid')
+          }
+
+          window.__isNightMode = !isNightMode;
+      }
+    </script>
+
+    <script data-goatcounter="https://kooparse.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </body>
+
+</html>

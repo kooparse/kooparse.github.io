@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <meta name="twitter:site" content="@kooparse">
+    <meta name="twitter:creator" content="@kooparse">
+    <meta name="twitter:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="Alex&#x27;s thinking box">
+    <meta name="og:image" content="https:&#x2F;&#x2F;kooparse.com/thumbnail.jpg">
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/favicon.png" rel="icon">
+    <link href="https:&#x2F;&#x2F;kooparse.com&#x2F;hidden&#x2F;about-text-rendering&#x2F;" rel="canonical">
+
+    
+  <title>About Text Rendering | Alex&#x27;s thinking box</title>
+  <meta name="description" content="Text rendering with signed distance field.">
+  <meta name="twitter:title" content="About Text Rendering">
+  <meta name="twitter:description" content="Text rendering with signed distance field.">
+  <meta name="og:title" content="About Text Rendering">
+  <meta name="og:description" content="Text rendering with signed distance field.">
+
+
+    <link href="https:&#x2F;&#x2F;kooparse.com/global.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar__container">
+      <div class="navbar__wrapper">
+        <div class="navbar__item">
+          <a href="/" id="writing">
+            <div class="navbar__item">Writing</div>
+          </a>
+        </div>
+        <div class="navbar__item">
+          <a href="/about" id="about">
+            <div class="navbar__item">About</div>
+          </a>
+        </div>
+      </div>
+
+      <div class ="navbar__night_switcher" id="night-switcher">
+        <span id="switcher-icon" style="font-size: 22px;">
+        </span>
+      </div>
+    </div>
+
+    
+<div class="main__container">
+  <div class="post__spacer">
+    <div class="posts__header">
+      <h3 class="post__title">
+        About Text Rendering
+      </h3>
+    </div>
+    <div class="post__date">
+      October 30, 2019
+    </div>
+    <div class="post__separator"></div>
+
+      <div class="post__text" />
+        <p>First, a quick introduction about typeface and font and stuff.</p>
+<p>A typeface is a set of one or more font. So a font is a collection of readable letters (also called glyph) for a specific size and weight of a related typeface.<br>
+A glyph is a shape with embedded properties such as the distance between the further one, the distance from the baseline, etc…</p>
+<p>Here's an illustration of glyph properties from <a href="https://developer.apple.com/library/archive/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/TypoFeatures/TextSystemFeatures.html">Text Programming Guide for iOS</a>:
+<img src="https://kooparse.com/hidden/about-text-rendering/./glyph.jpg" alt="Glyph metrics" /></p>
+<p>Oh, and a shape on the screen is “just” a bunch of pixels.
+<br></p>
+<hr>
+<br>
+<p>For my game, I ended up using a bitmap font with a signed distance field encoded in the alpha channel.
+<br>
+<br>
+Tadam, bye, love y'all.<br>
+Just kidding.</p>
+<p>A bitmap is a matrix of pixels. And a bitmap font is just all the (selected) glyph represented as pixels. In other words, I get one texture with all the glyph inside it. And all the glyph metadata are stored in another file.
+<img src="https://kooparse.com/hidden/about-text-rendering/./font_atlas.jpg" alt="Font Atlas" /></p>
+<p>I use this metadata file (currently in json) to retrieve each glyph on this texture with all their specific properties. A quick example for the letter “A”:</p>
+<pre data-lang="json" class="language-json "><code class="language-json" data-lang="json">&quot;A&quot;: {
+    &quot;x&quot;:544,
+    &quot;y&quot;:54,
+    &quot;width&quot;:40,
+    &quot;height&quot;:42,
+    &quot;originX&quot;:6,
+    &quot;originY&quot;:36,
+    &quot;advance&quot;:27
+}
+</code></pre>
+<p>We could easily find the letter on the texture with those properties and construct the letter quad.</p>
+<blockquote>
+<p>top left: (x, y).<br>
+top right: (x + width).<br>
+bottom left: (x, y + height).<br>
+bottom right: (x + width, y + height).<br></p>
+</blockquote>
+<p><em>(careful here, “x” and “y” are not computed in pixels, we have to divide “x” by the texture width to get it, same for “y” with the texture height).</em></p>
+<p>And if we want to draw a letter, we construct a quad and positioning it at the cursor (a variable starting at 0 if it's the first letter), then we place the quad on the baseline using originX and originY. Finally we draw the quad and increment the cursor with the glyph advance, for the next one.</p>
+<p>Quick illustration:
+<img src="https://kooparse.com/hidden/about-text-rendering/./quads_draw.jpg" alt="Quads drawing" /></p>
+<p>An implementation in Rust where &quot;<code>atlas_pos_x</code>/<code>atlas_pos_y</code>&quot; are &quot;<code>x</code>/<code>y</code>&quot; and &quot;<code>atlas_with</code>/<code>atlas_height</code>&quot; are 
+the size in pixels of our bitmap font. The &quot;<code>scale</code>&quot; is the font size applied. Also this piece of code is iterating over the text's letters.</p>
+<pre data-lang="rust" class="language-rust "><code class="language-rust" data-lang="rust">&#x2F;&#x2F; Position of the glyph on the texture atlas.
+let (top_left, top_right, bottom_left, bottom_right) = {
+    let top_left = (
+        letter.atlas_pos_x &#x2F; self.atlas_width,
+        letter.atlas_pos_y &#x2F; self.atlas_height,
+    );
+
+    let top_right = (
+        top_left.0 + (letter.width &#x2F; self.atlas_width),
+        top_left.1,
+    );
+
+    let bottom_left = (
+        top_left.0,
+        top_left.1 + (letter.height &#x2F; self.atlas_height),
+    );
+
+    let bottom_right = (top_right.0, bottom_left.1);
+
+    (top_left, top_right, bottom_left, bottom_right)
+};
+&#x2F;&#x2F; 
+&#x2F;&#x2F; 0 is our baseline.
+let x_pos = (cursor - letter.origin_x) * scale;
+let y_pos = (0. - (letter.height - letter.origin_y)) * scale;
+let width = letter.width * scale;
+let height = letter.height * scale;
+
+&#x2F;&#x2F; Quad data for our character with texture position based on 
+&#x2F;&#x2F; character metadata.
+#[rustfmt::skip]
+let character_quad: [f32; 24] = [
+    x_pos, y_pos + height,  top_left.0, top_left.1,
+    x_pos,  y_pos,          bottom_left.0, bottom_left.1,
+    x_pos + width, y_pos,   bottom_right.0, bottom_right.1,
+
+    x_pos, y_pos + height,  top_left.0, top_left.1,
+    x_pos + width, y_pos,   bottom_right.0, bottom_right.1,
+    x_pos + width, y_pos + height, top_right.0, top_right.1,
+];
+
+&#x2F;&#x2F; All the text quads are stored in this vertices array.
+&#x2F;&#x2F; We will send this to our GPU to draw all the quads.
+vertices.extend_from_slice(&amp;character_quad);
+cursor += letter.advance;
+
+</code></pre>
+<br>
+Everything is awesome but wait. If I change the size of my font without scaling the texture… my text will be blurry right? So each time I want to scale up/down my text… I should use a new texture (and load it to the gpu, etc…)? Really!? Really!?
+<p>As an example, a font generated with a size of 32px, then rendered with text scaled to 51px:
+<img src="https://kooparse.com/hidden/about-text-rendering/./unsigned.png" alt="Blurry scaled text rendered" />
+<br>
+Yup, it's blurry.</p>
+<p>To fix that, we are going to use a computed signed distance field. This technique comes from Valve, and was first used for Team Fortress 2. If you want more information about how they used it, it's <a href="https://steamcdn-a.akamaihd.net/apps/valve/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf">here</a>.
+<br></p>
+<p>Now, what is a signed distance field? In the context of font rendering, a distance field is a distance from a given pixel to the middle of his related glyph shape. This distance will be stored in the 8-bit alpha channel in a range of <code>0</code> to <code>255</code> mapped to <code>[0, 1]</code>. Where 0 is the maximum negative value, and 1 the maximum positive value, also 0.5 will then represent the exact position of the edge. So any value from 0 to 0.5 should be inside the shape, and 0.5 to 1 outside it.</p>
+<p>I drew the letter &quot;C&quot; and picked 3 points.
+<img src="https://kooparse.com/hidden/about-text-rendering/./sdf_draw.jpg" alt="Signed distance field drawing" /></p>
+<p>The points A is inside the shape and exactly in the middle, so the value is 0. Point B is totally outside the shape, so the value is 1; the point C is exactly on the edge so the value is 0.5 and every point near the edge (represented by the red line) are in the range <code>[0, 1]</code>.</p>
+<p>But, if we render our text with this technique, we get a very aliased text effect. Not really what we wanted.
+<br>
+<br>
+<img src="https://kooparse.com/hidden/about-text-rendering/./aliased.png" alt="Aliased text rendering" />
+<br></p>
+<p>So in the fragment shader, we could interpolate values near the edge of the shape like <code>[0.4, 0.6]</code>. This will produce a smooth text, as follows.
+<br>
+<br></p>
+<p><img src="https://kooparse.com/hidden/about-text-rendering/./smooth.png" alt="Smooth text rendering" />
+<br>
+And voilà.<br>
+Everything is smooth and tidy and clean and beautiful and...</p>
+
+      </div>
+      <hr class="post__end_liner" />
+
+      <ul class="post__footer">
+        <li class="post__footer_block post__prev_block">
+          
+        </li>
+
+        <li class="post__footer_block post__next_block">
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+    <script>
+      window.__is_about = /about\/$/.test(window.location.href);
+      window.__isNightMode = !!window.localStorage.getItem('isNightMode');
+
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.add(window.__isNightMode ? 'dark' : 'light');
+
+      const writing_nav = document.getElementById('writing');
+      const about_nav = document.getElementById('about');
+      const switcher_icon = document.getElementById('switcher-icon');
+
+      if (window.__is_about) {
+            writing_nav.classList.remove('active_tab');
+            about_nav.classList.add('active_tab');
+      } else {
+          writing_nav.classList.add('active_tab');
+          about_nav.classList.remove('active_tab');
+      }
+
+      document.getElementById("night-switcher")
+        .addEventListener("click", () => window.__setTheme());
+
+      switcher_icon.classList.add(window.__isNightMode 
+        ? 'icon-moon-solid' 
+        : 'icon-moon-regular'
+      );
+
+      window.__setTheme = function() {
+          const isNightMode = window.localStorage.getItem('isNightMode')
+
+          if (isNightMode) {
+            window.localStorage.removeItem('isNightMode')
+            body.classList.remove('dark');
+            body.classList.add('light');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-regular')
+          } else {
+            window.localStorage.setItem('isNightMode', 'true')
+            body.classList.remove('light');
+            body.classList.add('dark');
+
+            switcher_icon.removeAttribute("class");
+            switcher_icon.classList.add('icon-moon-solid')
+          }
+
+          window.__isNightMode = !isNightMode;
+      }
+    </script>
+
+    <script data-goatcounter="https://kooparse.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </body>
+
+</html>
