@@ -10,7 +10,7 @@ highlight_code = true
 highlight_theme = "ayu-mirage"
 
 build_search_index = false
-generate_rss = true
+generate_feed = true
 
 [extra]
 # Put all your custom variables here
